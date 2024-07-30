@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@material-tailwind/react": "^2.1.9",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.52.2",
     "axios": "^1.7.2",

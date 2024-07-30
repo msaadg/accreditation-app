@@ -13,7 +13,7 @@ export const imgContainerType = defineType({
       type: "text",
     }),
     defineField({
-      name: 'image',
+      name: 'image900X1920',
       type: 'image',
       options: {
         hotspot: true,
