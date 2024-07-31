@@ -11,7 +11,9 @@ export const AboutUs = ({title, description} : {
         <div className="w-28 h-1 bg-customOrange"></div>
       </div>
       <div className="text-lg text-gray-600 pb-6">
-        {description}
+        {description.split('\n').map((paragraph, index) => (
+          <p key={index} className="mb-4">{paragraph}</p>
+        ))}
       </div>
       <button className="bg-customOrange rounded-md text-white text-lg w-32 h-16 transition-all duration-300 hover:bg-black" onClick={() => console.log('Button clicked')}>
         Learn More

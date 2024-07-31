@@ -1,5 +1,5 @@
 export const NavBar = () => {
-  return <div className="">
+  return <div className="fixed top-12 w-full z-50 bg-white">
     <div className="flex px-11 py-6 text-black text-lg justify-end font-bold">
       <div className="flex ml-20">
         ABOUT

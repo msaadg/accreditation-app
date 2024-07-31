@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const ContactBar = ({email, phone} : {email: string, phone: string}) =>{
-  return <div className="bg-customOrange px-14 py-3">
+  return <div className="bg-customOrange px-14 py-3 fixed top-0 w-full z-50">
     <div className="flex justify-end text-white text-xl">
       <div className="flex">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-7 mr-1">
