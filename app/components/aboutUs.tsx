@@ -1,15 +1,12 @@
+import { Heading } from "./heading"
+
 export const AboutUs = ({title, description} : {
   title: string,
   description: string,
 }) => {
   return (
-    <div className="h-full flex flex-col justify-center p-4">
-      <div className="font-bold text-5xl text-gray-800 pb-6">
-        {title}
-      </div>
-      <div className="pb-6">
-        <div className="w-28 h-1 bg-customOrange"></div>
-      </div>
+    <div className="h-full flex flex-col justify-center">
+      <Heading title={title} />
       <div className="text-lg text-gray-600 pb-6">
         {description.split('\n').map((paragraph, index) => (
           <p key={index} className="mb-4">{paragraph}</p>

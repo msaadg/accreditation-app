@@ -6,7 +6,7 @@ export const ChaptersSec = ({title, desc, imageUrl} : {
   imageUrl: string
 }) => {
   return (
-    <div className='grid grid-cols-2 p-12'>
+    <div className='grid grid-cols-2 gap-10 p-16'>
       <div className='col-span-1'>
         <AboutUs title={title} description={desc} />
       </div>

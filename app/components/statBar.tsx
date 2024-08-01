@@ -5,7 +5,7 @@ export const StatBar = ({members, countries, institutes, professionals} : {
   professionals: number,
 }) => {
   return (
-    <div className="flex justify-around bg-customOrange py-12">
+    <div className="flex justify-around bg-blue-gray-900 py-12">
       <div className="text-5xl text-white font-bold">
         <div className="flex justify-center w-full pb-2">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-16">

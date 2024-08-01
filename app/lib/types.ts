@@ -14,18 +14,15 @@ export interface Slider {
   imageUrl: string;
 }
 
-export interface Event {
+export interface EventPreview {
   title: string;
   startDate: string;
-  endDate: string;
-  description: string;
-  location: string;
 }
 
-export interface News {
+export interface NewsPreview {
   title: string;
   preview: string;
-  description: string;
+  publishedAt: string;
   imageUrl: string;
 }
 
@@ -41,14 +38,14 @@ export interface LandingPage {
     description: string;
     title: string;
   };
-  events: Array<Event>;
+  events: Array<EventPreview>;
   howAccreditationHelps: {
     Q1: string;
     Q2: string;
     text: string;
     title: string;
   };
-  news: Array<News>;
+  news: Array<NewsPreview>;
   stats: {
     countries: number;
     institutes: number;
