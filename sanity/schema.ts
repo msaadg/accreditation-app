@@ -6,9 +6,14 @@ import { eventType } from './schemaTypes/Components/eventType'
 import { imgContainerType } from './schemaTypes/Components/imgContainerType'
 import { newsType } from './schemaTypes/Components/newsType'
 import { landingPageType } from './schemaTypes/Pages/landingPageType'
+import { bioDataType } from './schemaTypes/Components/bioDataType'
+import { aboutPageType } from './schemaTypes/Pages/aboutPageType'
+import { bgImgType } from './schemaTypes/Components/bgImgType'
+import { statsType } from './schemaTypes/Components/statsType'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
-    accreditationType, eventType, imgContainerType, newsType, landingPageType
+    accreditationType, eventType, imgContainerType, newsType, bioDataType, bgImgType, statsType,
+    landingPageType, aboutPageType
   ]
 }

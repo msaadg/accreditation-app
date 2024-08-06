@@ -27,7 +27,7 @@ export const EventsCarousel = ({ events } : {
   return (
     <Slider {...settings}>
       {events.map((event, index) => (
-        <div key={index} className="p-4 transition-transform duration-300 hover:scale-110">
+        <div key={index} className="p-4 transition-transform duration-300 hover:scale-110 hover:cursor-pointer">
           <div className="bg-blue-gray-900 text-white p-6 rounded-lg shadow-lg w-full h-56">
             <div className={`text-lg mb-2 ${colors[Math.round(Math.random() * 100) % colors.length]}`}>{event.title}</div>
             <div className="text-lg">{formatDateEvents(event.startDate)}</div>

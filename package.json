@@ -19,6 +19,7 @@
     "react-dom": "^18",
     "react-markdown": "^9.0.1",
     "react-slick": "^0.30.2",
+    "react-transition-group": "^4.4.5",
     "remark-gfm": "^4.0.0",
     "sanity": "^3.52.2",
     "slick-carousel": "^1.8.1",

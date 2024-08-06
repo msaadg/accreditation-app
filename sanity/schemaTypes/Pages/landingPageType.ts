@@ -10,22 +10,10 @@ export const landingPageType = defineType({
       type: "string",
     }),
     defineField({
-      name:"bioData",
-      type:"object",
-      fields: [
-        {
-          name: "email",
-          type: "email",
-        },
-        {
-          name: "phone",
-          type: "string",
-        },
-        {
-          name: "address",
-          type: "string",
-        }
-      ]
+      name: "bioData",
+      type: "reference", 
+      to: [{ type: "bioData" }],
+      title: "Bio Data"
     }),
     defineField({
       name: "Slider",
@@ -54,25 +42,10 @@ export const landingPageType = defineType({
       ]
     }),
     defineField({
-      name: "stats",
-      type: "object",
-      fields: [
-        {
-          name: "members",
-          type: "number",
-        },
-        {
-          name: "countries",
-          type: "number",
-        },{
-          name: "institutes",
-          type: "number",
-        },
-        {
-          name: "professionals",
-          type: "number",
-        }
-      ]
+      name: "StatsInfo",
+      type: "reference", 
+      to: [{ type: "stats" }],
+      title: "Stats Info"
     }),
     defineField({
       name: "howAccreditationHelps",

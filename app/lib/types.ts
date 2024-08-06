@@ -26,6 +26,11 @@ export interface NewsPreview {
   imageUrl: string;
 }
 
+export interface Links {
+  url: string;
+  text: string;
+}
+
 export interface LandingPage {
   Slider: Array<Slider>;
   aboutUs: {
@@ -58,4 +63,32 @@ export interface LandingPage {
     phone: string;
   }
   title: string;
+}
+
+export interface AboutPage {
+  bgImgUrl: string;
+  bioData: {
+    title: string;
+    email: string;
+    address: string;
+    phone: string;
+  }
+  description: string;
+  educationAccreditation: string;
+  mission: string;
+  professionalAccreditation: string;
+  subtitle: string;
+  title: string;
+  vision: string;
+  chapterMembers: {
+    chapterImageUrl: string;
+    description: string;
+    title: string;
+  };
+  StatsInfo: {
+    countries: number;
+    institutes: number;
+    members: number;
+    professionals: number;
+  }
 }

@@ -23,7 +23,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://7lhl2r8p.api.sanity.io/v2024-07-28/data/query/production?query=*%5B_type+%3D%3D+%22landingPage%22+%26%26+_id+%3D%3D+%222c362ba8-1eeb-4f11-82fa-b16d80d94e84%22%5D+%7B%0A++...%2C%0A++Slider%5B%5D-%3E%7B%0A++++title%2C%0A++++description%2C%0A++++%22imageUrl%22%3A+image900X1920.asset-%3Eurl%0A++%7D%2C%0A++aboutUs+%7B%0A++++title%2C%0A++++description%2C%0A++++accreditations%5B%5D-%3E%7B%0A++++++title%2C%0A++++++description%2C%0A++++%7D%2C%0A++%7D%2C%0A++chapterMembers+%7B%0A++++title%2C%0A++++description%2C%0A++++mainImage+%7B%0A++++++%22imageUrl%22%3A+asset-%3Eurl%2C%0A++++++alt%0A++++%7D%2C%0A++%7D%2C%0A++events%5B%5D-%3E%7B%0A++++title%2C%0A++++startDate%2C%0A++%7D%2C%0A++howAccreditationHelps%2C%0A++news%5B%5D-%3E%7B%0A++++publishedAt%2C%0A++++title%2C%0A++++preview%2C%0A++++%22imageUrl%22%3A+mainImage.asset-%3Eurl%0A++%7D%2C%0A++stats%0A%7D%0A');
+        const response = await axios.get('https://7lhl2r8p.api.sanity.io/v2024-07-28/data/query/production?query=*%5B_type+%3D%3D+%22landingPage%22+%26%26+_id+%3D%3D+%222c362ba8-1eeb-4f11-82fa-b16d80d94e84%22%5D+%7B%0A++Slider%5B%5D-%3E%7B%0A++++title%2C%0A++++description%2C%0A++++%22imageUrl%22%3A+image900X1920.asset-%3Eurl%0A++%7D%2C%0A++aboutUs+%7B%0A++++title%2C%0A++++description%2C%0A++++accreditations%5B%5D-%3E%7B%0A++++++title%2C%0A++++++description%2C%0A++++%7D%2C%0A++%7D%2C%0A++chapterMembers+%7B%0A++++title%2C%0A++++description%2C%0A++++mainImage+%7B%0A++++++%22imageUrl%22%3A+asset-%3Eurl%2C%0A++++++alt%0A++++%7D%2C%0A++%7D%2C%0A++events%5B%5D-%3E%7B%0A++++title%2C%0A++++startDate%2C%0A++%7D%2C%0A++howAccreditationHelps%2C%0A++news%5B%5D-%3E%7B%0A++++publishedAt%2C%0A++++title%2C%0A++++preview%2C%0A++++%22imageUrl%22%3A+mainImage.asset-%3Eurl%0A++%7D%2C%0A++stats%2C%0A++bioData-%3E+%7B%0A++++phone%2C%0A++++address%2C%0A++++email%0A++%7D%0A%7D%0A');
         setLandingPageData(response.data.result[0]);
         setLoading(false);
       } catch (error) {
@@ -41,7 +41,7 @@ const Home = () => {
     <div>
       <ContactBar email={landingPageData?.bioData.email || ""} phone={landingPageData?.bioData.phone || ""} />
       
-      <NavBar />
+      <NavBar members={landingPageData?.stats.members || 0} professionals={landingPageData?.stats.professionals || 0} institutes={landingPageData?.stats.institutes || 0} />
       
       <CarouselTransition slides={landingPageData?.Slider || []} />
       
@@ -53,7 +53,7 @@ const Home = () => {
 
       <AccreditationHelpsSec title={landingPageData?.howAccreditationHelps.title || ""} q1={landingPageData?.howAccreditationHelps.Q1 || ""} q2={landingPageData?.howAccreditationHelps.Q2 || ""} text={landingPageData?.howAccreditationHelps.text || ""} />
 
-      <AccreditedInsSec />
+      <AccreditedInsSec bgColor={true} />
 
       <ChaptersSec title={landingPageData?.chapterMembers.title || ""} desc={landingPageData?.chapterMembers.description || ""} imageUrl={landingPageData?.chapterMembers.mainImage.imageUrl || ""} />
 

@@ -16,7 +16,7 @@ export const NewsPrev = ({imageUrl, title, preview, publishedAt} : {
         <div className="text-3xl font-bold mb-2">{title}</div>
         <div className="mb-4 text-xl">{preview}</div>
         <div className="text-lg mb-4">{formatDateNews(publishedAt)}</div>
-        <div className="flex text-customOrange font-bold hover:underline">
+        <div className="flex text-customOrange font-bold hover:underline hover:cursor-pointer">
           <div className="mr-1 hover:mr-2 transition-all">
             Read Article
           </div>

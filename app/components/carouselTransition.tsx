@@ -1,5 +1,6 @@
 import { Carousel } from "@material-tailwind/react";
 import { Slider } from "../lib/types";
+import { RegisterCard } from "./registerCard";
 
 export function CarouselTransition({ slides }: { slides: Slider[] }) {
   const settings = {
@@ -15,7 +16,7 @@ export function CarouselTransition({ slides }: { slides: Slider[] }) {
     <Carousel
       {...settings}
       transition={{ duration: 2 }}
-      className="h-4/5 relative mt-28"
+      className="h-4/5 relative mt-32"
       placeholder=""
       onPointerEnterCapture={() => {}}
       onPointerLeaveCapture={() => {}}
@@ -32,8 +33,9 @@ export function CarouselTransition({ slides }: { slides: Slider[] }) {
               <div className="text-6xl font-bold mb-4">{slide.title}</div>
               <div className="text-3xl">{slide.description}</div>
             </div>
-            <div className="border-customOrange text-6xl bg-blue-gray-900 w-full h-96 p-4">
-              signup/signin box
+            
+            <div className="py-10 w-full h-full">
+              <RegisterCard />
             </div>
           </div>
         </div>

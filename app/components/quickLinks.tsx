@@ -86,7 +86,7 @@ export const QuickLinks = ({ email, phone, address } : {
 
           <div className="pt-4 flex">
             <input  placeholder="Enter your institute name" className="border-4 rounded-l-md border-customOrange w-full h-16 pl-4 bg-blue-gray-900 font-bold"/>
-            <button className='bg-customOrange rounded-r-md text-white text-lg w-40 h-16 transition-all duration-300 hover:bg-black' onClick={() => console.log('Button clicked')}>
+            <button className='bg-customOrange rounded-r-md text-white text-lg w-44 h-16 transition-all duration-300 hover:bg-white hover:text-customOrange' onClick={() => console.log('Button clicked')}>
               Search
             </button>
           </div>
@@ -99,8 +99,8 @@ export const QuickLinks = ({ email, phone, address } : {
 
           <div className="pt-4 flex">
             <input  placeholder="Your email" className="border-4 rounded-l-md border-customOrange w-full h-16 pl-4 bg-blue-gray-900 font-bold"/>
-            <button className='bg-customOrange rounded-r-md text-white text-lg w-40 h-16 transition-all duration-300 hover:bg-black' onClick={() => console.log('Button clicked')}>
-              Search
+            <button className='bg-customOrange rounded-r-md text-white text-lg w-44 h-16 transition-all duration-300 hover:bg-white hover:text-customOrange' onClick={() => console.log('Button clicked')}>
+              Subscribe
             </button>
           </div>
         </div>
