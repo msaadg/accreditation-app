@@ -31,6 +31,32 @@ export interface Links {
   text: string;
 }
 
+export interface StatsInfo {
+  members: number;
+  professionals: number;
+  countries: number;
+  institutes: number;
+}
+
+export interface BioData {
+  title: string;
+  email: string;
+  phone: string;
+  address: string;
+}
+
+export interface ChapterMemberPreview {
+  title: string;
+  slug: string;
+  memberImageUrl: string;
+  since: string;
+  education: string;
+}
+
+
+
+
+
 export interface LandingPage {
   Slider: Array<Slider>;
   aboutUs: {
@@ -51,28 +77,15 @@ export interface LandingPage {
     title: string;
   };
   news: Array<NewsPreview>;
-  stats: {
-    countries: number;
-    institutes: number;
-    members: number;
-    professionals: number;
-  };
-  bioData: {
-    email: string;
-    address: string;
-    phone: string;
-  }
+  stats: StatsInfo;
+  bioData: BioData;
   title: string;
 }
 
+
 export interface AboutPage {
   bgImgUrl: string;
-  bioData: {
-    title: string;
-    email: string;
-    address: string;
-    phone: string;
-  }
+  bioData: BioData;
   description: string;
   educationAccreditation: string;
   mission: string;
@@ -85,10 +98,17 @@ export interface AboutPage {
     description: string;
     title: string;
   };
-  StatsInfo: {
-    countries: number;
-    institutes: number;
-    members: number;
-    professionals: number;
-  }
+  StatsInfo: StatsInfo;
+}
+
+
+export interface ChapterMemberPage {
+  title: string;
+  subtitle: string;
+  bgImgUrl: string;
+  bgChapterMemberImgUrl: string;
+  bioData: BioData;
+  StatsInfo: StatsInfo;
+  description: string;
+  chapterMembers: ChapterMemberPreview[];
 }

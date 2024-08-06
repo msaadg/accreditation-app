@@ -9,7 +9,7 @@ export const AboutUsSec = ({title1, desc1, title2, desc2, title3, desc3} : {
   title3: string,
   desc3: string
 }) => {
-  return <div className='grid grid-cols-9 p-16 bg-gray-100'>
+  return <div className='grid grid-cols-9 p-16 bg-gray-100 gap-10'>
     <div className='col-span-4'>
       <AboutUs title={title1} description={desc1} />
     </div>

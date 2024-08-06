@@ -13,7 +13,7 @@ export const NavBar = ({members, professionals, institutes} : {
 
   return <div className="fixed top-12 w-full z-50 bg-white shadow-sm px-4">
     <div className="flex text-black text-lg justify-end font-bold">
-      <div className="flex px-8 py-6 hover:cursor-pointer hover:bg-gray-300 hover:text-customOrange" onMouseEnter={() => setDropdownAbout(true)} onMouseLeave={() => setDropdownAbout(false)} >
+      <div className="flex px-8 py-5 hover:cursor-pointer hover:bg-gray-300 hover:text-customOrange" onMouseEnter={() => setDropdownAbout(true)} onMouseLeave={() => setDropdownAbout(false)} >
         ABOUT
         <svg width="28px" height="28px" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
           <rect x="0" fill="none" width="24" height="24"/>
@@ -34,7 +34,7 @@ export const NavBar = ({members, professionals, institutes} : {
           />
         )}
       </div>
-      <div className="flex px-8 py-6 hover:cursor-pointer hover:bg-gray-300 hover:text-customOrange" onMouseEnter={() => setDropdownProfessional(true)} onMouseLeave={() => setDropdownProfessional(false)} >
+      <div className="flex px-8 py-5 hover:cursor-pointer hover:bg-gray-300 hover:text-customOrange" onMouseEnter={() => setDropdownProfessional(true)} onMouseLeave={() => setDropdownProfessional(false)} >
         PROFESSIONAL
         <svg width="28px" height="28px" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
           <rect x="0" fill="none" width="24" height="24"/>
@@ -55,7 +55,7 @@ export const NavBar = ({members, professionals, institutes} : {
           />
         )}
       </div>
-      <div className="flex px-8 py-6 hover:cursor-pointer hover:bg-gray-300 hover:text-customOrange" onMouseEnter={() => setDropdownEducation(true)} onMouseLeave={() => setDropdownEducation(false)} >
+      <div className="flex px-8 py-5 hover:cursor-pointer hover:bg-gray-300 hover:text-customOrange" onMouseEnter={() => setDropdownEducation(true)} onMouseLeave={() => setDropdownEducation(false)} >
         EDUCATION
         <svg width="28px" height="28px" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
           <rect x="0" fill="none" width="24" height="24"/>
@@ -79,7 +79,7 @@ export const NavBar = ({members, professionals, institutes} : {
           />
         )}
       </div>
-      <div className="flex px-8 py-6 hover:cursor-pointer hover:bg-gray-300 hover:text-customOrange" onMouseEnter={() => setDropdownPublications(true)} onMouseLeave={() => setDropdownPublications(false)} >
+      <div className="flex px-8 py-5 hover:cursor-pointer hover:bg-gray-300 hover:text-customOrange" onMouseEnter={() => setDropdownPublications(true)} onMouseLeave={() => setDropdownPublications(false)} >
         PUBLICATIONS
         <svg width="28px" height="28px" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
           <rect x="0" fill="none" width="24" height="24"/>

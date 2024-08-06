@@ -3,7 +3,7 @@ import { select } from "@material-tailwind/react"
 export const RegisterCard = () => {
   return (
     <div className="flex flex-col justify-between border-customOrange border-4 text-6xl bg-gray-500 opacity-95 w-full h-full p-12">
-      <div className="text-gray-800 text-center">
+      <div className="text-gray-800 text-center w-96">
         <div className="text-3xl font-extrabold">
           Looking to get accredited?
         </div>
@@ -23,8 +23,6 @@ export const RegisterCard = () => {
         
         <input placeholder="Your Name" className="w-full bg-gray-50 border border-gray-300 text-black text-sm rounded-lg h-16 p-4" />
         <input placeholder="Your Email" className="w-full bg-gray-50 border border-gray-300 text-black text-sm rounded-lg h-16 p-4" />
-
-      
         
         <form className="max-w-full mx-auto relative mt-4">
             <div className="absolute inset-y-0 start-0 top-0 flex items-center p-4 pointer-events-none">
@@ -35,20 +33,11 @@ export const RegisterCard = () => {
             <input type="text" id="phone-input" aria-describedby="helper-text-explanation" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-16 ps-10 p-4 " pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required />
         </form>
 
-
-        <div className="mt-8 mb-2 text-sm flex justify-center">
-          <div className="text-gray-800">
-            Are you a regsitered member?
-          </div>
-          <div className="text-blue-900 hover:cursor-pointer ml-1">
-            Login
-          </div>
-        </div>
-
-        <button className="bg-customOrange rounded-md text-white text-lg w-full h-16 transition-all duration-300 hover:bg-black" onClick={() => console.log('Button clicked')}>
-          Submit
-        </button>
       </div>
+      
+      <button className="bg-customOrange mt-6 rounded-md text-white text-lg w-full h-16 transition-all duration-300 hover:bg-black" onClick={() => console.log('Button clicked')}>
+        Submit
+      </button>
     </div>
   )
 }

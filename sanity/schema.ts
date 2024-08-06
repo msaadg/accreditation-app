@@ -10,10 +10,12 @@ import { bioDataType } from './schemaTypes/Components/bioDataType'
 import { aboutPageType } from './schemaTypes/Pages/aboutPageType'
 import { bgImgType } from './schemaTypes/Components/bgImgType'
 import { statsType } from './schemaTypes/Components/statsType'
+import { chapterMemberType } from './schemaTypes/Components/chapterMemberType'
+import { chapterMemberPageType } from './schemaTypes/Pages/chapterMemberPageType'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
-    accreditationType, eventType, imgContainerType, newsType, bioDataType, bgImgType, statsType,
-    landingPageType, aboutPageType
+    accreditationType, eventType, imgContainerType, newsType, bioDataType, bgImgType, statsType, chapterMemberType,
+    landingPageType, aboutPageType, chapterMemberPageType
   ]
 }

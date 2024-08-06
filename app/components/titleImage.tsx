@@ -5,7 +5,7 @@ export const TitleImage = ({ bgImg, title } : {
   title: string;
 }) => {
   return (
-    <div className="relative h-full mt-32">
+    <div className="relative h-full mt-28">
       <img
         src={bgImg}
         alt={title}
