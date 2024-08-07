@@ -53,8 +53,31 @@ export interface ChapterMemberPreview {
   education: string;
 }
 
+export interface Experience {
+  designation: string;
+  employer: string;
+  industry: string;
+  resp: string;
+  _key: string;
+}
+
+export interface PageData {
+  bgImgUrl: string;
+  bioData: BioData;
+  StatsInfo: StatsInfo;
+}
 
 
+export interface MemberData {
+  bio: string;
+  education: string;
+  experience: Experience[];
+  memberImage: string;
+  profession: string;
+  since: string;
+  slug: string;
+  title: string;
+};
 
 
 export interface LandingPage {
@@ -77,15 +100,11 @@ export interface LandingPage {
     title: string;
   };
   news: Array<NewsPreview>;
-  stats: StatsInfo;
-  bioData: BioData;
   title: string;
 }
 
 
 export interface AboutPage {
-  bgImgUrl: string;
-  bioData: BioData;
   description: string;
   educationAccreditation: string;
   mission: string;
@@ -98,17 +117,13 @@ export interface AboutPage {
     description: string;
     title: string;
   };
-  StatsInfo: StatsInfo;
 }
 
 
 export interface ChapterMemberPage {
   title: string;
   subtitle: string;
-  bgImgUrl: string;
   bgChapterMemberImgUrl: string;
-  bioData: BioData;
-  StatsInfo: StatsInfo;
   description: string;
   chapterMembers: ChapterMemberPreview[];
 }

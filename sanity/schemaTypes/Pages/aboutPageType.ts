@@ -10,25 +10,16 @@ export const aboutPageType = defineType({
       type: "string",
     }),
     defineField({
+      name: "slug",
+      type: "slug",
+      options: {
+        source: "title",
+        maxLength: 96,
+      }
+    }),
+    defineField({
       name: "subtitle",
       type: "string",
-    }),
-    defineField({
-      name: "bgImg",
-      type: "reference",
-      to: [{ type: "bgImg" }],
-    }),
-    defineField({
-      name: "bioData",
-      type: "reference", 
-      to: [{ type: "bioData" }],
-      title: "Bio Data"
-    }),
-    defineField({
-      name: "StatsInfo",
-      type: "reference", 
-      to: [{ type: "stats" }],
-      title: "Stats Info"
     }),
     defineField({
       name: "description",

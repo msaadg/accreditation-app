@@ -19,7 +19,7 @@ const MemberCard = ({ member } : { member: ChapterMemberPreview }) => {
         <div className="text-xl font-bold mb-2">{member.title}</div>
         <div className="text-sm mb-2">{member.education}</div>
         <div className="text-sm mb-2">Member Since: {member.since}</div>
-        <Link href={`/members/${member.slug}`} className="text-customOrange mt-4">View Profile</Link>
+        <Link href={`/chapter-member/${member.slug}`} className="text-customOrange mt-4">View Profile</Link>
       </div>
     </div>
   );

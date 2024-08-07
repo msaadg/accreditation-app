@@ -13,8 +13,8 @@ export const NewsPrev = ({imageUrl, title, preview, publishedAt} : {
         <div className="absolute inset-0 bg-gradient-to-t from-blue-gray-900 via-black/60 to-transparent opacity-100"></div>
       </div>
       <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
-        <div className="text-3xl font-bold mb-2">{title}</div>
-        <div className="mb-4 text-xl">{preview}</div>
+        <div className="text-2xl font-bold mb-2">{title}</div>
+        <div className="mb-4 text-lg">{preview}</div>
         <div className="text-lg mb-4">{formatDateNews(publishedAt)}</div>
         <div className="flex text-customOrange font-bold hover:underline hover:cursor-pointer">
           <div className="mr-1 hover:mr-2 transition-all">

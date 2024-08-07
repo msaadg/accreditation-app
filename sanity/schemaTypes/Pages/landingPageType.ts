@@ -10,10 +10,12 @@ export const landingPageType = defineType({
       type: "string",
     }),
     defineField({
-      name: "bioData",
-      type: "reference", 
-      to: [{ type: "bioData" }],
-      title: "Bio Data"
+      name: "slug",
+      type: "slug",
+      options: {
+        source: "title",
+        maxLength: 96,
+      }
     }),
     defineField({
       name: "Slider",
@@ -40,12 +42,6 @@ export const landingPageType = defineType({
           validation: Rule => Rule.length(2).required(),
         }
       ]
-    }),
-    defineField({
-      name: "StatsInfo",
-      type: "reference", 
-      to: [{ type: "stats" }],
-      title: "Stats Info"
     }),
     defineField({
       name: "howAccreditationHelps",
