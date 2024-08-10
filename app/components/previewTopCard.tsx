@@ -1,5 +1,8 @@
 import Link from 'next/link'
 import { Links } from '../lib/types'
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { RegisterCardTop } from './registerCardTop';
 export const PreviewTopCard = ({ title, text, btnText, secTitle, links}: {
   title: number | string,
   text: string,
@@ -7,6 +10,28 @@ export const PreviewTopCard = ({ title, text, btnText, secTitle, links}: {
   secTitle: string,
   links: Links[]
 }) => {
+  const [showRegisterCard, setShowRegisterCard] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const router = useRouter();
+
+  const toggleRegisterCard = () => {
+    if (showRegisterCard) {
+      setIsVisible(false);
+      setTimeout(() => setShowRegisterCard(false), 300); // duration should match the transition duration
+    } else {
+      setShowRegisterCard(true);
+      setTimeout(() => setIsVisible(true), 10);  // slight delay to trigger transition
+    }
+  };
+
+  const handleApplyClick = () => {
+    if (secTitle === 'About') {
+      router.push('signup-chapter-member');
+    } else {
+      toggleRegisterCard();
+    }
+  };
+
   return (
     <div className="absolute top-full right-8 w-max-full h-96 bg-white shadow-customOrange shadow-md p-12 flex gap-12 cursor-default">
       <div className="flex flex-col w-72">
@@ -16,12 +41,20 @@ export const PreviewTopCard = ({ title, text, btnText, secTitle, links}: {
         <div className="text-lg text-gray-600 font-normal text-center my-6">
           {text}
         </div>
-        <button className="bg-customOrange rounded-md text-white text-lg w-72 h-16 transition-all duration-300 hover:bg-gray-400 hover:text-black font-normal mb-4" onClick={() => console.log('Button clicked')}>
+        <button className="bg-customOrange rounded-md text-white text-lg w-72 h-16 transition-all duration-300 hover:bg-gray-400 hover:text-black font-normal mb-4" onClick={() => {handleApplyClick()}}>
           {btnText}
         </button>
         <button className='bg-blue-gray-900 rounded-md text-white text-lg w-72 h-16 transition-all duration-300 hover:bg-gray-400 hover:text-black font-normal' onClick={() => console.log('Button clicked')}>
           Contact Us
         </button>
+
+        {showRegisterCard && (
+          <div className="fixed top-28 inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+            <div className={`transform transition-all duration-300 ${isVisible ? 'scale-100 opacity-100' : 'scale-90 opacity-0'}`}>
+              <RegisterCardTop onClose={toggleRegisterCard} />
+            </div>
+          </div>
+        )}
       </div>
       
       <div className="flex flex-col justify-center">

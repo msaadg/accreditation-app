@@ -127,3 +127,23 @@ export interface ChapterMemberPage {
   description: string;
   chapterMembers: ChapterMemberPreview[];
 }
+
+export interface BecomeChapterMemberPage {
+  title: string;
+  subtitle: string;
+  bgBecomeChapterMemberImgUrl: string;
+  description: string;
+  proof1: string;
+  proof2: string;
+  events: string;
+  prospects: string;
+  opportunity: string;
+  publications: string;
+  endingTile: string;
+  endingDescription: string;
+}
+
+export interface SignupPage {
+  title: string;
+  subtitle: string;
+}

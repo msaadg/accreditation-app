@@ -119,3 +119,27 @@ export const landingPageQuery = groq`
     },
   }
 `;
+
+export const becomeChapterPageQuery = groq`
+  *[_type == "becomeChapterMemberPage" && slug.current == "become-a-chapter-member"][0]{
+    description,
+    endingDescription,
+    endingTitle,
+    events,
+    opportunity,
+    proof1,
+    proof2,
+    prospects,
+    publications,
+    subtitle,
+    title,
+    "bgBecomeChapterMemberImgUrl": bgBecomeChapterMemberImg->mainImage.asset->url,
+  }
+`;
+
+export const signupPageQuery = groq`
+  *[_type == "signupPage" && slug.current == "signup-chapter-member"][0]{
+    subtitle,
+    title,
+  }
+`;
