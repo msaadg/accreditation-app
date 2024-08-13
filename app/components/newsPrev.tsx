@@ -10,7 +10,7 @@ export const NewsPrev = ({imageUrl, title, preview, publishedAt} : {
     <div className="relative bg-white shadow-md overflow-hidden">
       <div className="relative">
         <img src={imageUrl} alt={title} className="w-full max-h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-blue-gray-900 via-black/60 to-transparent opacity-100"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-customBlue via-black/60 to-transparent opacity-100"></div>
       </div>
       <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
         <div className="text-2xl font-bold mb-2">{title}</div>

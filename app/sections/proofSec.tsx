@@ -1,7 +1,8 @@
 import React from 'react';
 import { Heading } from '../components/heading';
 
-export const MembershipProofSec = ({ bgImg, proof1, proof2 }: { 
+export const ProofSec = ({ title, bgImg, proof1, proof2 }: {
+  title: string,
   bgImg: string,
   proof1: string,
   proof2: string
@@ -13,7 +14,7 @@ export const MembershipProofSec = ({ bgImg, proof1, proof2 }: {
     >
       <div className="absolute inset-0 bg-opacity-50"></div>
       <div className="relative z-10 text-white container mx-auto px-4">
-        <Heading title="Membership Proof" color="white"/>
+        <Heading title={title} color="white"/>
         <div className="flex flex-col md:flex-row justify-between gap-48">
           <div className="md:w-1/2">
             <div className="text-lg mb-4">

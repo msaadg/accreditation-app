@@ -2,29 +2,29 @@ import { useState } from "react";
 import { ProfilePreview } from "../lib/types";
 import { ProfileCard } from "../components/profileCard";
 
-export const ChapterMemberPreviewSec = ({ members } : { members: ProfilePreview[] }) => {
+export const AccProfessionalsPreviewSec = ({ professionals } : { professionals: ProfilePreview[] }) => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredMembers, setFilteredMembers] = useState(members);
+  const [filteredProfessionals, setFilteredProfessionals] = useState(professionals);
 
   const handleSearch = () => {
     if (searchTerm.trim() === "") {
-      setFilteredMembers(members);
+      setFilteredProfessionals(professionals);
     }
     else {
-      const matchedMembers = members.filter(member => 
-        member.title.toLowerCase().includes(searchTerm.toLowerCase())
+      const matchedProfessionals = professionals.filter(professional => 
+        professional.title.toLowerCase().includes(searchTerm.toLowerCase())
       );
       // const unmatchedMembers = members.filter(member => 
       //   !member.title.toLowerCase().includes(searchTerm.toLowerCase())
       // );
-      setFilteredMembers(matchedMembers);
+      setFilteredProfessionals(matchedProfessionals);
     }
   }
 
   return (
-    <div className="p-16">
+    <div className="mx-16 mb-16">
       <div className="font-bold text-5xl text-gray-800 pb-6">
-        Our Valued Chapter Members
+        Featured Accredited Professionals
       </div>
 
       <div className="flex justify-end">
@@ -59,8 +59,8 @@ export const ChapterMemberPreviewSec = ({ members } : { members: ProfilePreview[
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 py-6">
-        {filteredMembers.map((member, index) => (
-          <ProfileCard key={index} profile={member} orig="chapter-member" />
+        {filteredProfessionals.map((member, index) => (
+          <ProfileCard key={index} profile={member} orig="accredited-professionals" />
         ))}
       </div>
     </div>

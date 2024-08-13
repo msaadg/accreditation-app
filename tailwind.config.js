@@ -10,6 +10,7 @@ module.exports = withMT({
     extend: {
       colors: {
         customOrange: '#dd9b2b',
+        customBlue: '#1D2136'
       },
     },
   },

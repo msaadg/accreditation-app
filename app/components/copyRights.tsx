@@ -1,6 +1,6 @@
 export const CopyRights = () => {
   return (
-    <div className="bg-blue-gray-900 text-white">
+    <div className="bg-customBlue text-white">
       <div>
         <div className="w-full h-0.5 bg-white"></div>
       </div>

@@ -25,11 +25,11 @@ export const ApplyExploreSec = ({bgImg, displayExplore = true} : {
           }
         </div>
         <div className="flex justify-start space-x-4">
-          <button className='bg-customOrange rounded-md text-white text-lg w-64 h-16 transition-all duration-300 hover:bg-blue-gray-900 px-6' onClick={() => { router.push('signup-chapter-member') }}>
+          <button className='bg-customOrange rounded-md text-white text-lg w-64 h-16 transition-all duration-300 hover:bg-customBlue px-6' onClick={() => { router.push('signup-chapter-member') }}>
             Apply For Membership
           </button>
           {displayExplore && (
-            <button className='bg-customOrange rounded-md text-white text-lg w-max-full h-16 transition-all duration-300 hover:bg-blue-gray-900 px-6' onClick={() => { router.push('become-a-chapter-member') }}>
+            <button className='bg-customOrange rounded-md text-white text-lg w-max-full h-16 transition-all duration-300 hover:bg-customBlue px-6' onClick={() => { router.push('become-a-chapter-member') }}>
             Explore Chapter Membership
           </button>
           )}

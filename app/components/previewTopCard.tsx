@@ -44,7 +44,7 @@ export const PreviewTopCard = ({ title, text, btnText, secTitle, links}: {
         <button className="bg-customOrange rounded-md text-white text-lg w-72 h-16 transition-all duration-300 hover:bg-gray-400 hover:text-black font-normal mb-4" onClick={() => {handleApplyClick()}}>
           {btnText}
         </button>
-        <button className='bg-blue-gray-900 rounded-md text-white text-lg w-72 h-16 transition-all duration-300 hover:bg-gray-400 hover:text-black font-normal' onClick={() => console.log('Button clicked')}>
+        <button className='bg-customBlue rounded-md text-white text-lg w-72 h-16 transition-all duration-300 hover:bg-gray-400 hover:text-black font-normal' onClick={() => console.log('Button clicked')}>
           Contact Us
         </button>
 

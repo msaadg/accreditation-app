@@ -28,7 +28,7 @@ export const SignupSec = ({ bgImgUrl } : { bgImgUrl: string}) => {
             <h3 className="text-xl font-bold mb-4">
               Explore the benefits of chapter membership
             </h3>
-            <button className="flex bg-customOrange hover:bg-blue-gray-900 transition-all duration-300 text-white text-base px-5 py-3 outline-none rounded w-max cursor-pointer mx-auto font-[sans-serif]" onClick={() => {router.push('become-a-chapter-member')}}>
+            <button className="flex bg-customOrange hover:bg-customBlue transition-all duration-300 text-white text-base px-5 py-3 outline-none rounded w-max cursor-pointer mx-auto font-[sans-serif]" onClick={() => {router.push('become-a-chapter-member')}}>
               Explore Now
             </button>
           </div>

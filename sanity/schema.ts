@@ -15,10 +15,20 @@ import { chapterMemberPageType } from './schemaTypes/Pages/chapterMemberPageType
 import { pageDataType } from './schemaTypes/Components/pageDataType'
 import { becomeChapterMemberPageType } from './schemaTypes/Pages/becomeChapterMemberPageType'
 import { signupPageType } from './schemaTypes/Pages/signupPageType'
+import { certificationCardType } from './schemaTypes/Components/certificationCardType'
+import { professionalAccreditationPageType } from './schemaTypes/Pages/professionalAccreditationPageType'
+import { stampsType } from './schemaTypes/Components/stampsType'
+import { processProfessionalPageType } from './schemaTypes/Pages/processProfessionalPageType'
+import { accreditedProfessionalsPageType } from './schemaTypes/Pages/accreditedProfessionalsPageType'
+import { accreditedProfessionalType } from './schemaTypes/Pages/accreditedProfessionalType'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
     accreditationType, eventType, imgContainerType, newsType, bioDataType, bgImgType, statsType, pageDataType,
-    landingPageType, aboutPageType, chapterMemberPageType, chapterMemberType, becomeChapterMemberPageType, signupPageType,
+    certificationCardType, stampsType,
+
+    landingPageType, aboutPageType, chapterMemberPageType, chapterMemberType, becomeChapterMemberPageType,
+    signupPageType, professionalAccreditationPageType, processProfessionalPageType, 
+    accreditedProfessionalType, accreditedProfessionalsPageType,
   ]
 }

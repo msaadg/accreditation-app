@@ -4,7 +4,7 @@ export const QuickLinks = ({ email, phone, address } : {
   address: string;
 }) => {
   return (
-    <div className="grid grid-cols-9 justify-between gap-8 px-16 py-16 bg-blue-gray-900 text-white">
+    <div className="grid grid-cols-9 justify-between gap-8 px-16 py-16 bg-customBlue text-white">
       <div className="col-span-4">
         <div className="text-2xl font-bold">
           Quick Links
@@ -85,7 +85,7 @@ export const QuickLinks = ({ email, phone, address } : {
           </div>
 
           <div className="pt-4 flex">
-            <input  placeholder="Enter your institute name" className="border-4 rounded-l-md border-customOrange w-full h-16 pl-4 bg-blue-gray-900 font-bold"/>
+            <input  placeholder="Enter your institute name" className="border-4 rounded-l-md border-customOrange w-full h-16 pl-4 bg-customBlue font-bold"/>
             <button className='bg-customOrange rounded-r-md text-white text-lg w-44 h-16 transition-all duration-300 hover:bg-white hover:text-customOrange' onClick={() => console.log('Button clicked')}>
               Search
             </button>
@@ -98,7 +98,7 @@ export const QuickLinks = ({ email, phone, address } : {
           </div>
 
           <div className="pt-4 flex">
-            <input  placeholder="Your email" className="border-4 rounded-l-md border-customOrange w-full h-16 pl-4 bg-blue-gray-900 font-bold"/>
+            <input  placeholder="Your email" className="border-4 rounded-l-md border-customOrange w-full h-16 pl-4 bg-customBlue font-bold"/>
             <button className='bg-customOrange rounded-r-md text-white text-lg w-44 h-16 transition-all duration-300 hover:bg-white hover:text-customOrange' onClick={() => console.log('Button clicked')}>
               Subscribe
             </button>

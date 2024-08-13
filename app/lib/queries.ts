@@ -22,25 +22,12 @@ export const chapterPageQuery = groq`
   *[_type == "chapterMemberPage" && slug.current == "chapter-members"][0]{
     title,
     subtitle,
-    "bgImgUrl": bgImg->mainImage.asset->url,
     "bgChapterMemberImgUrl": bgChapterMemberImg->mainImage.asset->url,
-    bioData-> {
-      title,
-      email,
-      phone,
-      address
-    },
-    StatsInfo-> {
-      members,
-      professionals,
-      countries,
-      institutes
-    },
     description,
     chapterMembers[]-> {
       title,
       "slug": slug.current,
-      "memberImageUrl": memberImage.asset->url,
+      "imageUrl": memberImage.asset->url,
       since,
       education,
     }
@@ -141,5 +128,91 @@ export const signupPageQuery = groq`
   *[_type == "signupPage" && slug.current == "signup-chapter-member"][0]{
     subtitle,
     title,
+  }
+`;
+
+export const professionalAccreditationPageQuery = groq`
+  *[_type == "professionalAccreditationPage" && slug.current == "professional-accreditation"][0]{
+    title,
+    subtitle,
+    description,
+    credibility,
+    proof1,
+    proof2,
+    prospects,
+    recognition,
+    opportunities,
+    reputation,
+    resources,
+    "bgProfessionalAccreditationImgUrl": bgProfessionalAccreditationImg->mainImage.asset->url,
+    "silver": silver->{
+      title,
+      "stamp": stamp->mainImage.asset->url,
+      "slug": slug.current,
+      "benefits": cardBenefits
+    },
+    "gold": gold->{
+      title,
+      "stamp": stamp->mainImage.asset->url,
+      "slug": slug.current,
+      "benefits": cardBenefits
+    },
+    "platinum": platinum->{
+      title,
+      "stamp": stamp->mainImage.asset->url,
+      "slug": slug.current,
+      "benefits": cardBenefits
+    },
+    "diamond": diamond->{
+      title,
+      "stamp": stamp->mainImage.asset->url,
+      "slug": slug.current,
+      "benefits": cardBenefits
+    }
+  }
+`;
+
+export const processProfessionalPageQuery = groq`
+  *[_type == "processProfessionalPage" && slug.current == "process-for-professional-accreditation"][0]{
+    title,
+    subtitle,
+    description,
+    "bgProcessProfessionalImgUrl": bgProcessProfessionalImg->mainImage.asset->url,
+  }
+`;
+
+export const accreditedProfessionalsPageQuery = groq`
+  *[_type == "accreditedProfessionalsPage" && slug.current == "accredited-professionals"][0]{
+    title,
+    subtitle,
+    "bgAccreditedProfessionalsImgUrl": bgAccreditedProfessionalsImg->mainImage.asset->url,
+    description,
+    accreditedProfessionals[]-> {
+      title,
+      "slug": slug.current,
+      "imageUrl": professionalImage.asset->url,
+      since,
+      education,
+    }
+  }
+`;
+
+export const professionalQuery = groq`
+  *[_type == "accreditedProfessional" && slug.current == $slug][0] {
+    bio,
+    "businessCardUrl": businessCard.asset->url,
+    "certificateUrl": certificate.asset->url,
+    city,
+    education,
+    format,
+    method,
+    "professionalImageUrl": professionalImage.asset->url,
+    registration,
+    since,
+    "slug": slug.current,
+    "stampUrl": stamp->mainImage.asset->url,
+    status,
+    title,
+    university
   }
 `;

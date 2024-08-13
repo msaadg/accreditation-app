@@ -1,0 +1,64 @@
+"use client"
+import { CertAndCard } from "@/app/components/certAndCard";
+import { ContactBar } from "@/app/components/contactBar";
+import { NavBar } from "@/app/components/navBar";
+import { ProfessionalIntro } from "@/app/components/professionalIntro";
+import ProfessionalKeyInfo from "@/app/components/professionalKeyInfo";
+import { pageDataQuery, professionalQuery } from "@/app/lib/queries";
+import { PageData, ProfessionalData } from "@/app/lib/types";
+import { Footer } from "@/app/sections/footerSec";
+import { TitleSec } from "@/app/sections/titleSec";
+import { client } from "@/sanity/lib/client";
+import { useEffect, useState } from "react";
+
+const ProfessionalPage = ({ params } : { params : { slug : string } }) => {
+  const { slug } = params;
+  const [professionalData, setProfessionalData] = useState<ProfessionalData | null>(null);
+  const [pageData, setPageData] = useState<PageData | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [professionalResponse, pageResponse] = await Promise.all([
+          client.fetch(professionalQuery, { slug }),
+          client.fetch(pageDataQuery)
+        ]);
+        setProfessionalData(professionalResponse);
+        setPageData(pageResponse);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        setLoading(false);
+      }
+    };
+
+    if (slug) {
+      fetchData();
+    }
+  }, [slug]);
+
+  if (loading) return <div>Loading...</div>;
+
+  if (!professionalData) return <div>No member data found</div>;
+
+  return (
+    <div>
+      <ContactBar email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} />
+
+      <NavBar members={pageData?.StatsInfo.members || 0} professionals={pageData?.StatsInfo.professionals || 0} institutes={pageData?.StatsInfo.institutes || 0} />
+
+      <TitleSec bgImg={pageData?.bgImgUrl || ""} title={professionalData?.title || ""} subTitle="Seeking competitive edge? Get accredited today!" stampUrl={professionalData?.stampUrl} />
+
+      <ProfessionalIntro professionalImgUrl={professionalData?.professionalImageUrl} bio={professionalData?.bio} />
+
+      <ProfessionalKeyInfo name={professionalData?.title} university={professionalData?.university} registration={professionalData?.registration} city={professionalData?.city} status={professionalData?.status} education={professionalData?.education} since={professionalData?.since} format={professionalData?.format} method={professionalData?.method} />
+      
+      <CertAndCard certUrl={professionalData?.certificateUrl || ""} cardUrl={professionalData?.businessCardUrl || ""} />
+
+      <Footer email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} address={pageData?.bioData.address || ""} />
+    </div>
+  );
+}
+
+export default ProfessionalPage

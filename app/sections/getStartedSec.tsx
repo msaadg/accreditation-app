@@ -1,5 +1,5 @@
 export const GetStartedSec = () => {
-  return <div className='bg-blue-gray-900 flex justify-around'>
+  return <div className='bg-customBlue flex justify-around'>
     <div className='text-3xl font-bold text-white py-5'>
       Get started on your journey
     </div>

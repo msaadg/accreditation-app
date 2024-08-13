@@ -6,7 +6,7 @@ import { BecomeChapterMemberPage, PageData } from "@/app/lib/types";
 import { ApplyExploreSec } from "@/app/sections/applyExploreSec";
 import { Footer } from "@/app/sections/footerSec";
 import { MemberBenefitsSec } from "@/app/sections/memberBenefitsSec";
-import { MembershipProofSec } from "@/app/sections/membershipProofSec";
+import { ProofSec } from "@/app/sections/proofSec";
 import { TitleSec } from "@/app/sections/titleSec";
 import { client } from "@/sanity/lib/client";
 import { useEffect, useState } from "react";
@@ -55,7 +55,7 @@ const BecomeAChapterMember = () => {
         ))}
       </div>
 
-      <MembershipProofSec bgImg={becomeChapterPageData?.bgBecomeChapterMemberImgUrl || ""} proof1={becomeChapterPageData?.proof1 || ""} proof2={becomeChapterPageData?.proof2 || ""} />
+      <ProofSec title="Membership Proof" bgImg={becomeChapterPageData?.bgBecomeChapterMemberImgUrl || ""} proof1={becomeChapterPageData?.proof1 || ""} proof2={becomeChapterPageData?.proof2 || ""} />
       
       <MemberBenefitsSec events={becomeChapterPageData?.events || ""} prospects={becomeChapterPageData?.prospects} opportunity={becomeChapterPageData?.opportunity || ""} publications={becomeChapterPageData?.publications || ""} />
       

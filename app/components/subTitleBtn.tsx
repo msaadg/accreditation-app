@@ -32,7 +32,7 @@ export const SubTitleBtn = ({ subTitle, redirectUrl }: { subTitle: string, redir
       </div>
       <div className='py-5'>
         <button 
-          className='bg-blue-gray-900 rounded-md text-white text-lg w-52 h-16 transition-all duration-300 hover:bg-white hover:text-black' 
+          className='bg-customBlue rounded-md text-white text-lg w-52 h-16 transition-all duration-300 hover:bg-white hover:text-black' 
           onClick={handleApplyClick}
         >
           Apply Now

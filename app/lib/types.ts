@@ -45,10 +45,10 @@ export interface BioData {
   address: string;
 }
 
-export interface ChapterMemberPreview {
+export interface ProfilePreview {
   title: string;
   slug: string;
-  memberImageUrl: string;
+  imageUrl: string;
   since: string;
   education: string;
 }
@@ -59,6 +59,14 @@ export interface Experience {
   industry: string;
   resp: string;
   _key: string;
+}
+
+
+export interface CertCard {
+  title: string;
+  stamp: string;
+  slug: string;
+  benefits: string[];
 }
 
 export interface PageData {
@@ -125,7 +133,7 @@ export interface ChapterMemberPage {
   subtitle: string;
   bgChapterMemberImgUrl: string;
   description: string;
-  chapterMembers: ChapterMemberPreview[];
+  chapterMembers: ProfilePreview[];
 }
 
 export interface BecomeChapterMemberPage {
@@ -146,4 +154,56 @@ export interface BecomeChapterMemberPage {
 export interface SignupPage {
   title: string;
   subtitle: string;
+}
+
+export interface ProfessionalAccreditationPage {
+  title: string;
+  subtitle: string;
+  bgProfessionalAccreditationImgUrl: string;
+  description: string;
+  proof1: string;
+  proof2: string;
+  credibility: string;
+  prospects: string;
+  recognition: string;
+  opportunities: string;
+  reputation: string;
+  resources: string;
+  silver: CertCard;
+  gold: CertCard;
+  platinum: CertCard;
+  diamond: CertCard;
+}
+
+export interface ProcessProfessionalPage {
+  title: string;
+  subtitle: string;
+  description: string;
+  bgProcessProfessionalImgUrl: string;
+}
+
+export interface AccreditedProfessionalsPage {
+  title: string;
+  subtitle: string;
+  bgAccreditedProfessionalsImgUrl: string;
+  description: string;
+  accreditedProfessionals: ProfilePreview[];
+}
+
+export interface ProfessionalData {
+  bio: string;
+  businessCardUrl: string;
+  certificateUrl: string;
+  city: string;
+  education: string;
+  format: string;
+  method: string;
+  professionalImageUrl: string;
+  registration: string;
+  since: string;
+  slug: string;
+  stampUrl: string;
+  status: string;
+  title: string;
+  university: string;
 }
