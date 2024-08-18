@@ -14,3 +14,21 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-y: auto; /* Allow vertical scrolling */
+}
+
+@media (max-width: 768px) {
+  body {
+    transform: scale(0.3); /* Scale down to 30% */
+    transform-origin: top left;
+    width: 333.33%; /* Adjust width to counteract the shrinkage */
+    height: auto; /* Allow body to grow as needed */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow-y: auto; /* Allow vertical scrolling */
+  }
+}

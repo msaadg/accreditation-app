@@ -1,6 +1,4 @@
-export const RegisterCardTop = ({ onClose } : {
-  onClose: () => void;
-}) => {
+export const RegisterCardTop = ({ onClose }: { onClose: () => void }) => {
   return (
     <div className="relative flex flex-col justify-between border-customOrange border-4 text-6xl bg-gray-500 opacity-95 max-w-lg p-12 rounded-lg shadow-lg">
       <button
@@ -9,8 +7,12 @@ export const RegisterCardTop = ({ onClose } : {
       >
         &times;
       </button>
-      <div className="text-gray-800 text-center">
-        <div className="text-3xl font-extrabold">Looking to get accredited?</div>
+      
+      {/* Center the text horizontally */}
+      <div className="flex flex-col justify-center items-center text-gray-800 text-center">
+        <div className="text-3xl font-extrabold">
+          Looking to get accredited?
+        </div>
         <div className="text-xl font-extrabold mt-2">
           Fill out the form and start your accreditation process in 30 seconds
         </div>
