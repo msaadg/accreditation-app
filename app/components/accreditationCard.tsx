@@ -27,10 +27,10 @@ export const AccreditationCard = ({title, description, svgContent} : {
         {svgContent ? educationSVG : professionSVG}
       </div>
 
-      <div className="text-center text-gray-800 pb-8 text-3xl font-medium">
+      <div className="text-center text-black pb-8 text-3xl font-medium">
         {title}
       </div>
-      <div className="text-center text-lg text-gray-600 pb-8">
+      <div className="text-center text-lg text-black pb-8">
         {description}
       </div>
       <div className="flex justify-center">

@@ -9,8 +9,8 @@ module.exports = withMT({
   theme: {
     extend: {
       colors: {
-        customOrange: '#dd9b2b',
-        customBlue: '#1D2136'
+        customOrange: '#25629B',
+        customBlue: '#0F2B41'
       },
     },
   },

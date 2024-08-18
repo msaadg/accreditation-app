@@ -11,7 +11,7 @@ export const AboutUs = ({title, description, chapter=false} : {
   return (
     <div className="h-full flex flex-col justify-center">
       <Heading title={title} />
-      <div className="text-lg text-gray-600 pb-6">
+      <div className="text-lg text-black pb-6">
         {description.split('\n').map((paragraph, index) => (
           <p key={index} className="mb-4">{paragraph}</p>
         ))}
