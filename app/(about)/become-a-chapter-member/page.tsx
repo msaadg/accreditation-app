@@ -59,11 +59,11 @@ const BecomeAChapterMember = () => {
       
       <MemberBenefitsSec events={becomeChapterPageData?.events || ""} prospects={becomeChapterPageData?.prospects} opportunity={becomeChapterPageData?.opportunity || ""} publications={becomeChapterPageData?.publications || ""} />
       
-      <div className="mx-16 mb-16 hover:scale-105 transition-all duration-300">
+      <div className="mx-16 mb-16 hover:scale-105 transition-all duration-700">
         <ApplyExploreSec bgImg={pageData?.bgImgUrl || ""} displayExplore={false} />
       </div>
 
-      <Footer email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} address={pageData?.bioData.address || ""} />
+      <Footer email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} address={pageData?.bioData.address || ""} social={{ facebook: pageData?.facebook || "", insta: pageData?.insta || "", twitter: pageData?.twitter || "", linkedIn: pageData?.linkedIn || "", youtube: pageData?.youtube || "" }} />
 
     </div>
   )

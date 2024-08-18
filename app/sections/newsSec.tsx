@@ -12,7 +12,7 @@ export const NewsSec = ({ news } : {
       <Heading title='The Latest News' />
       <div className="grid grid-cols-2 gap-10">
         {sortedNews.slice(0, 2).map((newsItem, index) => (
-          <NewsPrev key={index} imageUrl={newsItem.imageUrl} title={newsItem.title} preview={newsItem.preview} publishedAt={newsItem.publishedAt} />
+          <NewsPrev key={index} imageUrl={newsItem.imageUrl} title={newsItem.title} preview={newsItem.preview} publishedAt={newsItem.publishedAt} slug={newsItem.slug} />
         ))}
       </div>
     </div>

@@ -61,11 +61,11 @@ const About = () => {
       
       <TypesAccreditationsSec education={aboutPageData?.educationAccreditation || ""} professional={aboutPageData?.professionalAccreditation || ""} />
 
-      <AccreditedInsSec bgColor={false} />
+      <AccreditedInsSec bgColor={false} logos={aboutPageData?.logos || []} />
 
       <ChaptersSec title={aboutPageData?.chapterMembers.title || ""} desc={aboutPageData?.chapterMembers.description || ""} imageUrl={aboutPageData?.chapterMembers.chapterImageUrl || ""} />
 
-      <Footer email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} address={pageData?.bioData.address || ""} />
+      <Footer email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} address={pageData?.bioData.address || ""} social={{ facebook: pageData?.facebook || "", insta: pageData?.insta || "", twitter: pageData?.twitter || "", linkedIn: pageData?.linkedIn || "", youtube: pageData?.youtube || "" }} />
     </div>
   )
 }

@@ -15,6 +15,11 @@ export const pageDataQuery = groq`
       countries,
       institutes
     },
+    facebook,
+    insta,
+    twitter,
+    linkedIn,
+    youtube,
   }
 `;
 
@@ -66,7 +71,11 @@ export const aboutPageQuery = groq`
       title,
       description,
       "chapterImageUrl": chapterImage.asset->url,
-    }
+    },
+    logos[]->{
+      "imageUrl": mainImage.asset->url,
+      "alt": mainImage.alt
+    },
   }
 `;
 
@@ -96,13 +105,19 @@ export const landingPageQuery = groq`
     events[]->{
       title,
       startDate,
+      "slug": slug.current,
     },
     howAccreditationHelps,
+    logos[]->{
+      "imageUrl": mainImage.asset->url,
+      "alt": mainImage.alt
+    },
     news[]->{
       publishedAt,
       title,
       preview,
-      "imageUrl": mainImage.asset->url
+      "imageUrl": mainImage.asset->url,
+      "slug": slug.current,
     },
   }
 `;
@@ -214,5 +229,183 @@ export const professionalQuery = groq`
     status,
     title,
     university
+  }
+`;
+
+export const educationalAccreditationPageQuery = groq`
+  *[_type == "educationalAccreditationPage" && slug.current == "educational-accreditation"][0]{
+    title,
+    subtitle,
+    description,
+    proof1,
+    proof2,
+    funds,
+    faculty,
+    value,
+    businesses,
+    allocation,
+    edge,
+    study,
+    markets,
+    "bgEducationalAccreditationImgUrl": bgEducationalAccreditationImg->mainImage.asset->url,
+    "silver": silver->{
+      title,
+      "stamp": stamp->mainImage.asset->url,
+      "slug": slug.current,
+      "benefits": cardBenefits
+    },
+    "gold": gold->{
+      title,
+      "stamp": stamp->mainImage.asset->url,
+      "slug": slug.current,
+      "benefits": cardBenefits
+    },
+    "platinum": platinum->{
+      title,
+      "stamp": stamp->mainImage.asset->url,
+      "slug": slug.current,
+      "benefits": cardBenefits
+    },
+    "diamond": diamond->{
+      title,
+      "stamp": stamp->mainImage.asset->url,
+      "slug": slug.current,
+      "benefits": cardBenefits
+    },
+    logos[]->{
+      "imageUrl": mainImage.asset->url,
+      "alt": mainImage.alt
+    },
+  }
+`;
+
+export const criteriaEducationalPageQuery = groq`
+  *[_type == "criteriaEducationalPage" && slug.current == "criteria-for-educational-accreditation"][0]{
+    title,
+    subtitle,
+    description1,
+    description2,
+    attributes,
+    "bgCriteriaEducationalImgUrl": bgCriteriaEducationalImg->mainImage.asset->url,
+    management,
+    progress,
+    implications,
+    standard1 {
+      title,
+      description
+    },
+    standard2 {
+      title,
+      description
+    },
+    standard3 {
+      title,
+      description
+    },
+    standard4 {
+      title,
+      description
+    },
+    standard5 {
+      title,
+      description
+    },
+    standard6 {
+      title,
+      description
+    },
+    standard7 {
+      title,
+      description
+    },
+    standard8 {
+      title,
+      description
+    },
+     standard9 {
+      title,
+      description
+    }
+  }
+`;
+
+export const processEducationalPageQuery = groq`
+  *[_type == "processEducationalPage" && slug.current == "process-for-educational-accreditation"][0]{
+    title,
+    subtitle,
+    description,
+    "bgProcessEducationalImgUrl": bgProcessEducationalImg->mainImage.asset->url,
+  }
+`;
+
+export const educationalInstitutesPageQuery = groq`
+  *[_type == "educationalInstitutePage" && slug.current == "accredited-educational-institutes"][0]{
+    title,
+    subtitle,
+    description,
+    educationalInstitutes[]->{
+      title,
+      "slug": slug.current,
+      "insLogo": insLogo->mainImage.asset->url,
+      "stamp": stamp->mainImage.asset->url,
+      preview,
+    }
+  }
+`;
+
+export const educationalInstituteQuery = groq`
+  *[_type == "educationalInstitute" && slug.current == $slug][0] {
+    title,
+    bio,
+    city,
+    deliveryMethod,
+    deliveryOption,
+    educationLevel,
+    facultyCount,
+    format,
+    grantedYear,
+    language,
+    membershipNumber,
+    membershipType,
+    preview,
+    program,
+    programFormat,
+    programsOffered,
+    status,
+    studentsCount,
+    validationPeriod,
+    schoolWeb,
+    schoolContact,
+    schoolFacebook,
+    schoolTwitter,
+    schooInsta,
+    schoolLinkedIn,
+    schoolYoutube,
+    "insCertUrl": insCert.asset->url,
+    "insImageUrl": insImage.asset->url,
+    "insLogoUrl": insLogo->mainImage.asset->url,
+    "stampUrl": stamp->mainImage.asset->url,
+    standardMetrics,
+    "slug": slug.current
+  }
+`;
+
+export const newsQuery = groq`
+  *[_type == "news" && slug.current == $slug][0]{
+    publishedAt,
+    title,
+    description,
+    "slug": slug.current,
+  }
+`;
+
+export const eventQuery = groq`
+  *[_type == "event" && slug.current == $slug][0]{
+    title,
+    description,
+    startDate,
+    endDate,
+    location,
+    "slug": slug.current,
   }
 `;

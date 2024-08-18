@@ -21,11 +21,11 @@ const AccreditationSection = ({ title, content, isOpen, onClick } : {
   return (
     <div className="mt-6 mb-2">
       <button
-        className="w-full flex justify-between bg-gray-100 hover:bg-gray-200 mb-4"
+        className="w-full flex justify-between bg-gray-100 hover:bg-gray-200 mb-2"
         onClick={onClick}
       >
-        <div className="font-bold p-6 text-xl">{title}</div>
-        <div className="text-xl w-36 h-20 flex flex-col justify-center bg-customOrange">{isOpen ? '▲' : '▼'}</div>
+        <div className="p-4 text-lg text-gray-800">{title}</div>
+        <div className="text-xl w-24 h-16 flex flex-col justify-center bg-customOrange">{isOpen ? '▲' : '▼'}</div>
       </button>
       
       <div

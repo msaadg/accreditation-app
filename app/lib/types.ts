@@ -8,6 +8,11 @@ export interface Accreditation {
   description: string;
 }
 
+export interface Standard {
+  title: string;
+  description: string;
+}
+
 export interface Slider {
   title: string;
   description: string;
@@ -17,6 +22,7 @@ export interface Slider {
 export interface EventPreview {
   title: string;
   startDate: string;
+  slug: string;
 }
 
 export interface NewsPreview {
@@ -24,6 +30,7 @@ export interface NewsPreview {
   preview: string;
   publishedAt: string;
   imageUrl: string;
+  slug: string;
 }
 
 export interface Links {
@@ -53,6 +60,14 @@ export interface ProfilePreview {
   education: string;
 }
 
+export interface InstitutePreview {
+  title: string;
+  slug: string;
+  insLogo: string;
+  stamp: string;
+  preview: string;
+}
+
 export interface Experience {
   designation: string;
   employer: string;
@@ -73,6 +88,11 @@ export interface PageData {
   bgImgUrl: string;
   bioData: BioData;
   StatsInfo: StatsInfo;
+  facebook: string;
+  insta: string;
+  twitter: string;
+  linkedIn: string;
+  youtube: string;
 }
 
 
@@ -107,6 +127,7 @@ export interface LandingPage {
     text: string;
     title: string;
   };
+  logos: Array<Image>;
   news: Array<NewsPreview>;
   title: string;
 }
@@ -125,6 +146,7 @@ export interface AboutPage {
     description: string;
     title: string;
   };
+  logos: Array<Image>;
 }
 
 
@@ -206,4 +228,121 @@ export interface ProfessionalData {
   status: string;
   title: string;
   university: string;
+}
+
+export interface EducationalAccreditationPage {
+  title: string;
+  subtitle: string;
+  description: string;
+  proof1: string;
+  proof2: string;
+  funds: string;
+  faculty: string;
+  value: string;
+  businesses: string;
+  allocation: string;
+  edge: string;
+  study: string;
+  markets: string;
+  bgEducationalAccreditationImgUrl: string;
+  silver: CertCard;
+  gold: CertCard;
+  platinum: CertCard;
+  diamond: CertCard;
+  logos: Array<Image>;
+}
+
+export interface CriteriaEducationalPage {
+  title: string;
+  slug: string;
+  subtitle: string;
+  description1: string;
+  description2: string;
+  attributes: string[];
+  bgCriteriaEducationalImgUrl: string;
+  management: string;
+  progress: string;
+  implications: string;
+  standard1: Standard;
+  standard2: Standard;
+  standard3: Standard;
+  standard4: Standard;
+  standard5: Standard;
+  standard6: Standard;
+  standard7: Standard;
+  standard8: Standard;
+  standard9: Standard;
+}
+
+export interface ProcessEducationalPage {
+  title: string;
+  subtitle: string;
+  description: string;
+  bgProcessEducationalImgUrl: string;
+}
+
+export interface educationalInstitutesPage {
+  title: string;
+  subtitle: string;
+  description: string;
+  educationalInstitutes: InstitutePreview[];
+}
+
+export interface EducationalInstituteData {
+  title: string;
+  bio: string;
+  city: string;
+  deliveryMethod: string;
+  deliveryOption: string;
+  educationLevel: string;
+  facultyCount: string;
+  format: string;
+  grantedYear: number;
+  language: string;
+  membershipNumber: string;
+  membershipType: string;
+  preview: string;
+  program: string;
+  programFormat: string;
+  programsOffered: string;
+  status: string;
+  studentsCount: string;
+  validationPeriod: string;
+  schoolWeb: string;
+  schoolContact: string;
+  schoolFacebook: string;
+  schoolTwitter: string;
+  schooInsta: string;
+  schoolLinkedIn: string;
+  schoolYoutube: string;
+  insCertUrl: string;
+  insImageUrl: string;
+  insLogoUrl: string;
+  stampUrl: string;
+  standardMetrics: number[];
+  slug: string;
+}
+
+export interface NewsData {
+  title: string;
+  publishedAt: string;
+  description: string;
+  slug: string;
+}
+
+export interface EventData {
+  title: string;
+  description: string;
+  startDate: string;
+  endDate: string;
+  location: string;
+  slug: string;
+}
+
+export interface SocialData {
+  facebook: string;
+  twitter: string;
+  insta: string;
+  linkedIn: string;
+  youtube: string;
 }

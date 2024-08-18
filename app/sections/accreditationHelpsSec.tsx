@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Heading } from "../components/heading"
 
 export const AccreditationHelpsSec = ({title, q1, q2, text} : {
@@ -12,15 +13,15 @@ export const AccreditationHelpsSec = ({title, q1, q2, text} : {
         <div className="col-span-1 pt-20">
           <Heading title={title} />
           <div className="pr-12">
-            <div className="pt-6 font-semibold text-xl text-gray-800 hover:cursor-pointer">
+            <Link href={'/educational-accreditation'} className="pt-6 font-semibold text-xl text-gray-800 hover:cursor-pointer">
               {q1}
-            </div>
+            </Link>
             <div className="pb-6">
               <div className="max-w-xl h-0.5 bg-customOrange"></div>
             </div>
-            <div className="pt-6 font-semibold text-xl text-gray-800 hover:cursor-pointer">
+            <Link href={'/professional-accreditation'} className="pt-6 font-semibold text-xl text-gray-800 hover:cursor-pointer">
               {q2}
-            </div>
+            </Link>
             <div className="pb-6">
               <div className="max-w-xl h-0.5 bg-customOrange"></div>
             </div>

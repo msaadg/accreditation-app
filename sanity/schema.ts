@@ -21,6 +21,13 @@ import { stampsType } from './schemaTypes/Components/stampsType'
 import { processProfessionalPageType } from './schemaTypes/Pages/processProfessionalPageType'
 import { accreditedProfessionalsPageType } from './schemaTypes/Pages/accreditedProfessionalsPageType'
 import { accreditedProfessionalType } from './schemaTypes/Pages/accreditedProfessionalType'
+import { educationalAccreditationPageType } from './schemaTypes/Pages/educationalAccreditationPageType'
+import { criteriaEducationalPageType } from './schemaTypes/Pages/criteriaEducationalPageType'
+import { processEducationalPageType } from './schemaTypes/Pages/processEducationalPageType'
+import { educationalInstituteType } from './schemaTypes/Pages/educationalInstituteType'
+import { educationalInstitutePageType } from './schemaTypes/Pages/educationalInstitutePageType'
+import { insLogosType } from './schemaTypes/Components/insLogosType'
+
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -30,5 +37,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     landingPageType, aboutPageType, chapterMemberPageType, chapterMemberType, becomeChapterMemberPageType,
     signupPageType, professionalAccreditationPageType, processProfessionalPageType, 
     accreditedProfessionalType, accreditedProfessionalsPageType,
+    educationalAccreditationPageType, criteriaEducationalPageType, processEducationalPageType,
+    insLogosType, educationalInstituteType, educationalInstitutePageType,
   ]
 }

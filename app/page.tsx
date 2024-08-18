@@ -64,7 +64,7 @@ const Home = () => {
 
       <AccreditationHelpsSec title={landingPageData?.howAccreditationHelps.title || ""} q1={landingPageData?.howAccreditationHelps.Q1 || ""} q2={landingPageData?.howAccreditationHelps.Q2 || ""} text={landingPageData?.howAccreditationHelps.text || ""} />
 
-      <AccreditedInsSec bgColor={true} />
+      <AccreditedInsSec bgColor={true} logos={landingPageData?.logos || []} />
 
       <ChaptersSec title={landingPageData?.chapterMembers.title || ""} desc={landingPageData?.chapterMembers.description || ""} imageUrl={landingPageData?.chapterMembers.mainImage.imageUrl || ""} />
 
@@ -72,7 +72,7 @@ const Home = () => {
 
       <EventsSec events={landingPageData?.events || []} />
 
-      <Footer email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} address={pageData?.bioData.address || ""} />
+      <Footer email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} address={pageData?.bioData.address || ""} social={{ facebook: pageData?.facebook || "", insta: pageData?.insta || "", twitter: pageData?.twitter || "", linkedIn: pageData?.linkedIn || "", youtube: pageData?.youtube || "" }} />
     </div>
   );
 };

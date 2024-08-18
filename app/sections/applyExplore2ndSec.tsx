@@ -2,8 +2,9 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { RegisterCardTop } from "../components/registerCardTop";
 
-export const ApplyExplore2ndSec = ({ bgImgUrl } : {
+export const ApplyExplore2ndSec = ({ bgImgUrl, redirectUrl } : {
   bgImgUrl: string;
+  redirectUrl: string;
 }) => {
   const [showRegisterCard, setShowRegisterCard] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -20,7 +21,7 @@ export const ApplyExplore2ndSec = ({ bgImgUrl } : {
   };
 
   return (
-    <div className="flex gap-6 mx-16 mb-16">
+    <div className="flex gap-6 mt-12 mx-16 mb-16">
       <div className="relative w-full h-96 overflow-hidden hover:scale-105 transition-all duration-300">
         <img
           src={bgImgUrl}
@@ -67,7 +68,7 @@ export const ApplyExplore2ndSec = ({ bgImgUrl } : {
           <h3 className="text-xl font-bold mb-10">
             Explore the process of accreditation to better understand accreditation requirements
           </h3>
-          <button className="flex bg-customOrange hover:bg-customBlue transition-all duration-300 text-white text-base px-5 py-3 outline-none rounded w-max cursor-pointer mx-auto font-[sans-serif]" onClick={() => {router.push('process-for-professional-accreditation')}}>
+          <button className="flex bg-customOrange hover:bg-customBlue transition-all duration-300 text-white text-base px-5 py-3 outline-none rounded w-max cursor-pointer mx-auto font-[sans-serif]" onClick={() => {router.push(redirectUrl)}}>
             Explore Now
           </button>
         </div>

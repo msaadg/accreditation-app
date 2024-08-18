@@ -42,6 +42,11 @@ export const aboutPageType = defineType({
       type: "text"
     }),
     defineField({
+      name: "logos",
+      type: "array",
+      of: [{ type: "reference", to: [{ type: "insLogos" }] }],
+    }),
+    defineField({
       name: "chapterMembers",
       type: "object",
       fields: [

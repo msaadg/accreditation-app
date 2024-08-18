@@ -11,7 +11,7 @@ export const CertAndCard = ({ certUrl, cardUrl } : {
         <img
           src={certUrl}
           alt="Professional"
-          className="max-h-full max-w-full object-cover object-top col-span-1"
+          className="max-h-full max-w-full object-cover object-top col-span-1 hover:shadow-2xl transition-all duration-300"
         />
       </div>
 
@@ -20,7 +20,7 @@ export const CertAndCard = ({ certUrl, cardUrl } : {
         <img
           src={cardUrl}
           alt="Professional"
-          className="max-h-full max-w-full object-cover object-top col-span-1"
+          className="max-h-full max-w-full object-cover object-top col-span-1 hover:shadow-2xl transition-all duration-300"
         />
       </div>
     </div>

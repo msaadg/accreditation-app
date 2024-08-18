@@ -40,7 +40,7 @@ const ProfessionalPage = ({ params } : { params : { slug : string } }) => {
 
   if (loading) return <div>Loading...</div>;
 
-  if (!professionalData) return <div>No member data found</div>;
+  if (!professionalData) return <div>No professional data found</div>;
 
   return (
     <div>
@@ -56,7 +56,7 @@ const ProfessionalPage = ({ params } : { params : { slug : string } }) => {
       
       <CertAndCard certUrl={professionalData?.certificateUrl || ""} cardUrl={professionalData?.businessCardUrl || ""} />
 
-      <Footer email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} address={pageData?.bioData.address || ""} />
+      <Footer email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} address={pageData?.bioData.address || ""} social={{ facebook: pageData?.facebook || "", insta: pageData?.insta || "", twitter: pageData?.twitter || "", linkedIn: pageData?.linkedIn || "", youtube: pageData?.youtube || "" }} />
     </div>
   );
 }

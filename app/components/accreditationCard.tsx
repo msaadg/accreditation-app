@@ -1,3 +1,4 @@
+import { useRouter } from "next/navigation"
 import React from "react"
 
 export const AccreditationCard = ({title, description, svgContent} : {
@@ -5,6 +6,8 @@ export const AccreditationCard = ({title, description, svgContent} : {
   description: string,
   svgContent: boolean,
 }) => {
+  const router = useRouter();
+
   const educationSVG = 
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-16">
     <path d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z" />
@@ -31,7 +34,7 @@ export const AccreditationCard = ({title, description, svgContent} : {
         {description}
       </div>
       <div className="flex justify-center">
-        <button className="bg-customOrange rounded-md text-white text-lg w-full h-16 transition-all duration-300 hover:bg-black" onClick={() => console.log('Button clicked')}>
+        <button className="bg-customOrange rounded-md text-white text-lg w-full h-16 transition-all duration-300 hover:bg-black" onClick={() => svgContent ? router.push('/educational-accreditation') : router.push('/professional-accreditation')}>
           Find Out More
         </button>
       </div>

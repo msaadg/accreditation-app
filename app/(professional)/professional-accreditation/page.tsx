@@ -62,9 +62,9 @@ const ProfessionalAccreditation = () => {
       
       <MembershipTypes silver={professionalAccreditationPageData?.silver} gold={professionalAccreditationPageData?.gold} platinum={professionalAccreditationPageData?.platinum} diamond={professionalAccreditationPageData?.diamond} />
       
-      <ApplyExplore2ndSec bgImgUrl={pageData?.bgImgUrl || ""} />
+      <ApplyExplore2ndSec bgImgUrl={pageData?.bgImgUrl || ""} redirectUrl="process-for-professional-accreditation" />
 
-      <Footer email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} address={pageData?.bioData.address || ""} />
+      <Footer email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} address={pageData?.bioData.address || ""} social={{ facebook: pageData?.facebook || "", insta: pageData?.insta || "", twitter: pageData?.twitter || "", linkedIn: pageData?.linkedIn || "", youtube: pageData?.youtube || "" }} />
     </div>
   )
 }

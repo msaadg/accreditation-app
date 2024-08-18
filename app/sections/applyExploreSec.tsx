@@ -9,7 +9,7 @@ export const ApplyExploreSec = ({bgImg, displayExplore = true} : {
 
   return (
     <div
-      className="relative bg-cover bg-center p-16"
+      className="relative bg-cover bg-right-bottom p-16"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="absolute inset-0"></div>

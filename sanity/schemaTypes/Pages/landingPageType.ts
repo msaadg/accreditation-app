@@ -66,6 +66,11 @@ export const landingPageType = defineType({
       ] 
     }),
     defineField({
+      name: "logos",
+      type: "array",
+      of: [{ type: "reference", to: [{ type: "insLogos" }] }],
+    }),
+    defineField({
       name: "chapterMembers",
       type: "object",
       fields: [
