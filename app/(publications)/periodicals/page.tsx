@@ -5,3 +5,5 @@ const Periodicals = () => {
     </div>
   )
 }
+
+export default Periodicals

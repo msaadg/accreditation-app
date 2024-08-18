@@ -67,8 +67,8 @@ export const PreviewTopCard = ({ title, text, btnText, secTitle, links}: {
         </div>
         <div className="mt-6 w-64">
           {links.map((link, index) => (
-            <div className="text-lg text-gray-600 font-normal my-2 hover:cursor-pointer hover:text-customOrange">
-              <Link key={index} href={link.url}>{link.text}</Link>
+            <div key={index} className="text-lg text-gray-600 font-normal my-2 hover:cursor-pointer hover:text-customOrange">
+              <Link href={link.url}>{link.text}</Link>
             </div>
           ))}
         </div>
