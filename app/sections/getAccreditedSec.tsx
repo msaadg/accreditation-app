@@ -28,7 +28,7 @@ export const GetAccreditedSec = ({bgImg, displayExplore = true} : {
           Want to get accredited?
         </div>
         <div className="text-lg my-12">
-          GSA Council is committed to providing the best accreditation services to professionals around the globe. Apply now and get the recognition you deserve.
+          WSA Council is committed to providing the best accreditation services to professionals around the globe. Apply now and get the recognition you deserve.
         </div>
         <div className="flex justify-start space-x-4">
           <button className='bg-customOrange rounded-md text-white text-lg w-64 h-16 transition-all duration-300 hover:bg-customBlue px-6' onClick={() => {toggleRegisterCard()}}>

@@ -15,7 +15,7 @@ export const ApplyExploreSec = ({bgImg, displayExplore = true} : {
       <div className="absolute inset-0"></div>
       <div className="relative z-10 text-white">
         <div className="text-5xl font-bold mb-4">
-          Want to be a part of GSA Council? Become a Chapter Member and start earning.
+          Want to be a part of WSA Council? Become a Chapter Member and start earning.
         </div>
         <div className="text-lg my-12">
           Become our designated chapter member in your country and help us throughout the accreditation process. If you are eligible and can do this, apply now.

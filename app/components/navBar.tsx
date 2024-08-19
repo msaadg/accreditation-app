@@ -22,7 +22,7 @@ export const NavBar = ({members, professionals, institutes} : {
         {dropdownAbout && (
           <PreviewTopCard title={members} text="Chapters members associated from around the world" btnText="Apply For Membership" secTitle="About" links={[
             {
-              text: "About GSA Council",
+              text: "About WSA Council",
               url: "/about"
             }, {
               text: "Chapter Members Directory",
@@ -86,9 +86,9 @@ export const NavBar = ({members, professionals, institutes} : {
           <g><path d="M7 10l5 5 5-5"/></g>
         </svg>
         {dropdownPublications && (
-          <PreviewTopCard title="Monthly" text="Magazine by GSA Council" btnText="Subscribe Newsletter" secTitle="Publications" links={[
+          <PreviewTopCard title="Monthly" text="Magazine by WSA Council" btnText="Subscribe Newsletter" secTitle="Publications" links={[
             {
-              text: "GSA Periodicals",
+              text: "WSA Periodicals",
               url: "/periodicals"
             }]}
           />

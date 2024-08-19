@@ -7,7 +7,7 @@ export const CopyRights = () => {
 
       <div className="px-16 py-6 flex justify-between">
         <div className="">
-          Copyright © 2007-2023 Global Standardization & Accreditation Council. All rights reserved.
+          Copyright © 2007-2023 World Standardization & Accreditation Council. All rights reserved.
         </div>
         
         <div className="flex justify-between gap-10">

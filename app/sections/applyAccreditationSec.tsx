@@ -28,7 +28,7 @@ export const ApplyAccreditationSec = ({ bgImg }: { bgImg: string }) => {
             Want to get Accredited?
           </div>
           <div className="text-lg my-12">
-            GSA Council is committed to providing world-class accreditation services to educational institutes worldwide. Apply for accreditation, become a part of the GSA Council education network, and enjoy global recognition.
+            WSA Council is committed to providing world-class accreditation services to educational institutes worldwide. Apply for accreditation, become a part of the WSA Council education network, and enjoy world recognition.
           </div>
           <div className="flex justify-start space-x-4">
             <button
