@@ -21,7 +21,8 @@ export const SubTitleBtn = ({ subTitle, redirectUrl }: { subTitle: string, redir
     if (redirectUrl) {
       router.push(redirectUrl);
     } else {
-      toggleRegisterCard();
+      // toggleRegisterCard();
+      router.push('/');
     }
   };
 

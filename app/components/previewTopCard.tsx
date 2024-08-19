@@ -28,7 +28,8 @@ export const PreviewTopCard = ({ title, text, btnText, secTitle, links}: {
     if (secTitle === 'About') {
       router.push('signup-chapter-member');
     } else {
-      toggleRegisterCard();
+      // toggleRegisterCard();
+      router.push('/');
     }
   };
 
@@ -44,7 +45,7 @@ export const PreviewTopCard = ({ title, text, btnText, secTitle, links}: {
         <button className="bg-customOrange rounded-md text-white text-lg w-72 h-16 transition-all duration-300 hover:bg-gray-400 hover:text-black font-normal mb-4" onClick={() => {handleApplyClick()}}>
           {btnText}
         </button>
-        <button className='bg-customBlue rounded-md text-white text-lg w-72 h-16 transition-all duration-300 hover:bg-gray-400 hover:text-black font-normal' onClick={() => console.log('Button clicked')}>
+        <button className='bg-customBlue rounded-md text-white text-lg w-72 h-16 transition-all duration-300 hover:bg-gray-400 hover:text-black font-normal' onClick={() => {router.push('/contact')}}>
           Contact Us
         </button>
 

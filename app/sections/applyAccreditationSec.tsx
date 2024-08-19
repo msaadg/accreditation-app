@@ -6,6 +6,8 @@ export const ApplyAccreditationSec = ({ bgImg }: { bgImg: string }) => {
   const [showRegisterCard, setShowRegisterCard] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
+  const router = useRouter();
+
   const toggleRegisterCard = () => {
     if (showRegisterCard) {
       setIsVisible(false);
@@ -33,7 +35,8 @@ export const ApplyAccreditationSec = ({ bgImg }: { bgImg: string }) => {
           <div className="flex justify-start space-x-4">
             <button
               className="bg-customOrange rounded-md text-white text-lg w-64 h-16 transition-all duration-300 hover:bg-customBlue px-6"
-              onClick={toggleRegisterCard}
+              // onClick={toggleRegisterCard}
+              onClick={() => {router.push('/')}}
             >
               Apply For Accreditation
             </button>

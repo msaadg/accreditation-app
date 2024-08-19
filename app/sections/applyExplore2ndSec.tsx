@@ -38,7 +38,10 @@ export const ApplyExplore2ndSec = ({ bgImgUrl, redirectUrl } : {
           <h3 className="text-xl font-bold mb-10">
             Apply for Accreditation now and improve your industry ranking
           </h3>
-          <button className="flex bg-customOrange hover:bg-customBlue transition-all duration-300 text-white text-base px-5 py-3 outline-none rounded w-max cursor-pointer mx-auto font-[sans-serif]" onClick={() => {toggleRegisterCard()}}>
+          <button className="flex bg-customOrange hover:bg-customBlue transition-all duration-300 text-white text-base px-5 py-3 outline-none rounded w-max cursor-pointer mx-auto font-[sans-serif]" 
+            // onClick={() => {toggleRegisterCard()}}
+            onClick={() => {router.push('/')}}
+          >
             Apply Now
           </button>
         </div>

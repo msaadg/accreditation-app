@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { RegisterCardTop } from "../components/registerCardTop"
+import { useRouter } from "next/navigation";
 
 export const GetAccreditedSec = ({bgImg, displayExplore = true} : {
   bgImg: string
@@ -7,6 +8,8 @@ export const GetAccreditedSec = ({bgImg, displayExplore = true} : {
 }) => {
   const [showRegisterCard, setShowRegisterCard] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const router = useRouter();
+
   const toggleRegisterCard = () => {
     if (showRegisterCard) {
       setIsVisible(false);
@@ -31,7 +34,10 @@ export const GetAccreditedSec = ({bgImg, displayExplore = true} : {
           WSA Council is committed to providing the best accreditation services to professionals around the globe. Apply now and get the recognition you deserve.
         </div>
         <div className="flex justify-start space-x-4">
-          <button className='bg-customOrange rounded-md text-white text-lg w-64 h-16 transition-all duration-300 hover:bg-customBlue px-6' onClick={() => {toggleRegisterCard()}}>
+          <button className='bg-customOrange rounded-md text-white text-lg w-64 h-16 transition-all duration-300 hover:bg-customBlue px-6'
+            // onClick={() => {toggleRegisterCard()}}
+            onClick={() => {router.push('/')}}
+          >
             Apply For Accreditation
           </button>          
         </div>
