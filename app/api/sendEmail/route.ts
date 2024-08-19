@@ -14,14 +14,14 @@ export async function POST(request: Request) {
       port: 465,
       secure: true,
       auth: {
-        user: process.env.NEXT_PUBLIC_EMAIL_USERNAME,
-        pass: process.env.NEXT_PUBLIC_EMAIL_PASSWORD,
+        user: process.env.EMAIL_USERNAME,
+        pass: process.env.EMAIL_PASSWORD,
       },
     });
 
     const mailOptions = {
-      from: process.env.NEXT_PUBLIC_EMAIL_USERNAME,
-      to: process.env.NEXT_PUBLIC_PERSONAL_EMAIL,
+      from: process.env.EMAIL_USERNAME,
+      to: process.env.PERSONAL_EMAIL,
       replyTo: email,
       subject: `Accreditation Request from ${name}`,
       html: `

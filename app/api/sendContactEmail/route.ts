@@ -12,15 +12,15 @@ export async function POST(req: Request) {
       port: 465,
       secure: true,
       auth: {
-        user: process.env.NEXT_PUBLIC_EMAIL_USERNAME, // your Gmail username
-        pass: process.env.NEXT_PUBLIC_EMAIL_PASSWORD, // your Gmail password or app-specific password
+        user: process.env.EMAIL_USERNAME, // your Gmail username
+        pass: process.env.EMAIL_PASSWORD, // your Gmail password or app-specific password
       },
     });
 
     // Define the email options
     const mailOptions = {
-      from: process.env.NEXT_PUBLIC_EMAIL_USERNAME,
-      to: process.env.NEXT_PUBLIC_PERSONAL_EMAIL, // your personal email address
+      from: process.env.EMAIL_USERNAME,
+      to: process.env.PERSONAL_EMAIL, // your personal email address
       replyTo: email,
       subject: `New Enquiry from ${name}`,
       html: `
