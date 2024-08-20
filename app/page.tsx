@@ -17,6 +17,7 @@ import { EventsSec } from './sections/eventsSec';
 import { Footer } from './sections/footerSec';
 import { client } from '@/sanity/lib/client';
 import { landingPageQuery, pageDataQuery } from './lib/queries';
+import { Logo } from './components/logo';
 
 const Home = () => {
   const [landingPageData, setLandingPageData] = useState<LandingPage | null>(null);
@@ -52,8 +53,10 @@ const Home = () => {
     <div>
       <ContactBar email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} />
       
-      <NavBar members={pageData?.StatsInfo.members || 0} professionals={pageData?.StatsInfo.professionals || 0} institutes={pageData?.StatsInfo.institutes || 0} logoUrl={pageData?.logoUrl || ""} />
+      <NavBar members={pageData?.StatsInfo.members || 0} professionals={pageData?.StatsInfo.professionals || 0} institutes={pageData?.StatsInfo.institutes || 0} />
       
+      <Logo logoUrl={pageData?.logoUrl || ""} />
+
       <CarouselTransition slides={landingPageData?.Slider || []} />
       
       <GetStartedSec />
