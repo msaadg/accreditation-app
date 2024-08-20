@@ -55,7 +55,7 @@ const InstitutePage = ({ params } : { params : { slug : string } }) => {
     <div>
       <ContactBar email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} />
 
-      <NavBar members={pageData?.StatsInfo.members || 0} professionals={pageData?.StatsInfo.professionals || 0} institutes={pageData?.StatsInfo.institutes || 0} />
+      <NavBar members={pageData?.StatsInfo.members || 0} professionals={pageData?.StatsInfo.professionals || 0} institutes={pageData?.StatsInfo.institutes || 0} logoUrl={pageData?.logoUrl || ""} />
 
       <TitleSec bgImg={instituteData?.insImageUrl || ""} title={instituteData?.title || ""} subTitle="Seeking competitive edge? Get accredited today!" stampUrl={instituteData?.stampUrl} darken={true} />
 

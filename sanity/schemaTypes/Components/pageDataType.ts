@@ -27,6 +27,11 @@ export const pageDataType = defineField({
       to: [{ type: "bgImg" }],
     }),
     defineField({
+      name: "logo",
+      type: "reference",
+      to: [{ type: "bgImg" }],
+    }),
+    defineField({
       name: "facebook",
       type: "url",
     }),

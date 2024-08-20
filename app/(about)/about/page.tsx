@@ -47,7 +47,7 @@ const About = () => {
     <div>
       <ContactBar email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} />
 
-      <NavBar members={pageData?.StatsInfo.members || 0} professionals={pageData?.StatsInfo.professionals || 0} institutes={pageData?.StatsInfo.institutes || 0} />
+      <NavBar members={pageData?.StatsInfo.members || 0} professionals={pageData?.StatsInfo.professionals || 0} institutes={pageData?.StatsInfo.institutes || 0} logoUrl={pageData?.logoUrl || ""} />
 
       <TitleSec bgImg={pageData?.bgImgUrl || ""} title={aboutPageData?.title || ""} subTitle={aboutPageData?.subtitle || ""} /> 
 

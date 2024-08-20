@@ -3,6 +3,7 @@ import { groq } from "next-sanity";
 export const pageDataQuery = groq`
   *[_type == "pageData"][0]{
     "bgImgUrl": bgImg->mainImage.asset->url,
+    "logoUrl": logo->mainImage.asset->url,
     bioData-> {
       title,
       email,

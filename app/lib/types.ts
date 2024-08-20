@@ -86,6 +86,7 @@ export interface CertCard {
 
 export interface PageData {
   bgImgUrl: string;
+  logoUrl: string;
   bioData: BioData;
   StatsInfo: StatsInfo;
   facebook: string;
