@@ -10,6 +10,7 @@ import { Footer } from "@/app/sections/footerSec";
 import { MemberBio } from "@/app/components/memberBio";
 import { EducationExperience } from "@/app/components/educationExperience";
 import { Exp } from "@/app/components/exp";
+import { Logo } from "@/app/components/logo";
 
 const MemberPage = ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
@@ -47,6 +48,8 @@ const MemberPage = ({ params }: { params: { slug: string } }) => {
       <ContactBar email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} />
 
       <NavBar members={pageData?.StatsInfo.members || 0} professionals={pageData?.StatsInfo.professionals || 0} institutes={pageData?.StatsInfo.institutes || 0} />
+
+      <Logo logoUrl={pageData?.logoUrl || ""} />
 
       <TitleSec bgImg={pageData?.bgImgUrl || ""} title="Chapter Members" subTitle="Become a Chapter Member and start earning now!" /> 
       

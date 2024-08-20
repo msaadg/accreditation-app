@@ -5,6 +5,7 @@ import { EnquiryForm } from "@/app/components/enquiryForm";
 import { InstituteContactInfo } from "@/app/components/instituteContactInfo";
 import { InstituteIntro } from "@/app/components/instituteIntro";
 import InstituteKeyInfo from "@/app/components/instituteKeyInfo";
+import { Logo } from "@/app/components/logo";
 import { NavBar } from "@/app/components/navBar";
 import { educationalInstituteQuery, pageDataQuery } from "@/app/lib/queries";
 import { EducationalInstituteData, PageData } from "@/app/lib/types";
@@ -56,6 +57,8 @@ const InstitutePage = ({ params } : { params : { slug : string } }) => {
       <ContactBar email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} />
 
       <NavBar members={pageData?.StatsInfo.members || 0} professionals={pageData?.StatsInfo.professionals || 0} institutes={pageData?.StatsInfo.institutes || 0} />
+
+      <Logo logoUrl={pageData?.logoUrl || ""} />
 
       <TitleSec bgImg={instituteData?.insImageUrl || ""} title={instituteData?.title || ""} subTitle="Seeking competitive edge? Get accredited today!" stampUrl={instituteData?.stampUrl} darken={true} />
 

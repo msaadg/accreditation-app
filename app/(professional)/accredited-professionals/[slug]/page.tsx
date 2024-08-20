@@ -1,6 +1,7 @@
 "use client"
 import { CertAndCard } from "@/app/components/certAndCard";
 import { ContactBar } from "@/app/components/contactBar";
+import { Logo } from "@/app/components/logo";
 import { NavBar } from "@/app/components/navBar";
 import { ProfessionalIntro } from "@/app/components/professionalIntro";
 import ProfessionalKeyInfo from "@/app/components/professionalKeyInfo";
@@ -47,6 +48,8 @@ const ProfessionalPage = ({ params } : { params : { slug : string } }) => {
       <ContactBar email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} />
 
       <NavBar members={pageData?.StatsInfo.members || 0} professionals={pageData?.StatsInfo.professionals || 0} institutes={pageData?.StatsInfo.institutes || 0} />
+
+      <Logo logoUrl={pageData?.logoUrl || ""} />
 
       <TitleSec bgImg={pageData?.bgImgUrl || ""} title={professionalData?.title || ""} subTitle="Seeking competitive edge? Get accredited today!" stampUrl={professionalData?.stampUrl} />
 

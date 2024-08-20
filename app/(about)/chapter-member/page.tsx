@@ -1,5 +1,6 @@
 "use client"
 import { ContactBar } from "@/app/components/contactBar";
+import { Logo } from "@/app/components/logo";
 import { NavBar } from "@/app/components/navBar";
 import { chapterPageQuery, pageDataQuery } from "@/app/lib/queries";
 import { ChapterMemberPage, PageData } from "@/app/lib/types";
@@ -45,6 +46,8 @@ const ChapterMember = () => {
       <ContactBar email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} />
 
       <NavBar members={pageData?.StatsInfo.members || 0} professionals={pageData?.StatsInfo.professionals || 0} institutes={pageData?.StatsInfo.institutes || 0} />
+
+      <Logo logoUrl={pageData?.logoUrl || ""} />
 
       <TitleSec bgImg={pageData?.bgImgUrl || ""} title={chapterPageData?.title || ""} subTitle={chapterPageData?.subtitle || ""} /> 
 

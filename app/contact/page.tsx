@@ -8,6 +8,7 @@ import { NavBar } from "../components/navBar";
 import { TitleSec } from "../sections/titleSec";
 import { Footer } from "../sections/footerSec";
 import { GetInTouch } from "../components/getInTouch";
+import { Logo } from "../components/logo";
 
 const Contact = () => {
   const [pageData, setPageData] = useState<PageData | null>(null);
@@ -38,6 +39,8 @@ const Contact = () => {
       <ContactBar email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} />
 
       <NavBar members={pageData?.StatsInfo.members || 0} professionals={pageData?.StatsInfo.professionals || 0} institutes={pageData?.StatsInfo.institutes || 0} />
+
+      <Logo logoUrl={pageData?.logoUrl || ""} />
 
       <TitleSec bgImg={pageData?.bgImgUrl || ""} title="Contact Global Accreditation & Standardization Council" subTitle="Seeking competitive edge? Get accredited today!" />
 

@@ -1,6 +1,7 @@
 "use client"
 import { ContactBar } from "@/app/components/contactBar";
 import { Heading } from "@/app/components/heading";
+import { Logo } from "@/app/components/logo";
 import { NavBar } from "@/app/components/navBar";
 import { pageDataQuery, processEducationalPageQuery } from "@/app/lib/queries";
 import { PageData, ProcessEducationalPage } from "@/app/lib/types";
@@ -44,6 +45,8 @@ const ProcessForEducationalAccreditation = () => {
       <ContactBar email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} />
 
       <NavBar members={pageData?.StatsInfo.members || 0} professionals={pageData?.StatsInfo.professionals || 0} institutes={pageData?.StatsInfo.institutes || 0} />
+
+      <Logo logoUrl={pageData?.logoUrl || ""} />
 
       <TitleSec bgImg={pageData?.bgImgUrl || ""} title={processEducationalPageData?.title || ""} subTitle={processEducationalPageData?.subtitle || ""} /> 
 
