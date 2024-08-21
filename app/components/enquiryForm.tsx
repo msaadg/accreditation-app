@@ -60,16 +60,12 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({ schoolTitle }) => {
     setLoading(true);
 
     try {
-      const formDataObject = new FormData();
-      formDataObject.append('name', name);
-      formDataObject.append('email', email);
-      formDataObject.append('phone', phone);
-      formDataObject.append('message', message);
-      formDataObject.append('schoolTitle', schoolTitle);
-
-      const res = await fetch('/api/sendEnquiryEmail', {
+      const res = await fetch('/api/sendEnquiry', {
         method: 'POST',
-        body: formDataObject,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, phone, message, schoolTitle }),
       });
 
       const data = await res.json();

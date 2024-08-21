@@ -53,7 +53,7 @@ export const GetInTouch: React.FC<GetInTouchProps> = ({ phone, email }) => {
     setLoading(true);
 
     try {
-      const res = await fetch('/api/sendContactEmail', {
+      const res = await fetch('/api/sendContact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

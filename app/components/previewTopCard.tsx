@@ -26,7 +26,7 @@ export const PreviewTopCard = ({ title, text, btnText, secTitle, links}: {
 
   const handleApplyClick = () => {
     if (secTitle === 'About') {
-      router.push('signup-chapter-member');
+      router.push('/signup-chapter-member');
     } else {
       // toggleRegisterCard();
       router.push('/');

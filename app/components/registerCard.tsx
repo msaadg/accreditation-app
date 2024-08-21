@@ -60,25 +60,22 @@ export const RegisterCard: React.FC = () => {
     setLoading(true);
 
     try {
-      const formDataObject = new FormData();
-      formDataObject.append('userType', formData.userType);
-      formDataObject.append('name', formData.name);
-      formDataObject.append('email', formData.email);
-      formDataObject.append('phone', formData.phone);
-
-      const res = await fetch('/api/sendEmail', {
+      const response = await fetch('/api/register', {
         method: 'POST',
-        body: formDataObject,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
 
-      const data = await res.json();
+      const data = await response.json();
 
       if (data.success) {
-        setSuccessMessage('Email sent successfully!');
+        setSuccessMessage('Data added to Google Sheets successfully!');
         setFormData({ userType: "", name: "", email: "", phone: "" }); // Reset form
         setErrors({});
       } else {
-        setErrors({ form: 'Failed to send email. Please try again later.' });
+        setErrors({ form: 'Failed to submit data. Please try again later.' });
       }
     } catch (error) {
       console.error('Error:', error);
