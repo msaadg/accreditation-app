@@ -2,6 +2,7 @@ import { client } from "@/sanity/lib/client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { SocialData } from "../lib/types";
+import { useRouter } from "next/navigation";
 
 export const QuickLinks = ({ email, phone, address, social } : {
   email: string;
@@ -9,6 +10,7 @@ export const QuickLinks = ({ email, phone, address, social } : {
   address: string;
   social: SocialData;
 }) => {
+  const router = useRouter();
   return (
     <div className="grid grid-cols-9 justify-between gap-8 px-16 py-16 bg-customBlue text-white">
       <div className="col-span-4">
@@ -103,7 +105,7 @@ export const QuickLinks = ({ email, phone, address, social } : {
 
           <div className="pt-4 flex">
             <input  placeholder="Enter your institute name" className="border-4 rounded-l-md border-customOrange w-full h-16 pl-4 bg-customBlue font-bold"/>
-            <button className='bg-customOrange rounded-r-md text-white text-lg w-44 h-16 transition-all duration-300 hover:bg-white hover:text-customOrange' onClick={() => console.log('Button clicked')}>
+            <button className='bg-customOrange rounded-r-md text-white text-lg w-44 h-16 transition-all duration-300 hover:bg-white hover:text-customOrange' onClick={() => {router.push('accredited-educational-institutes')}}>
               Search
             </button>
           </div>
