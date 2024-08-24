@@ -24,7 +24,7 @@ export const QuickLinks = ({ email, phone, address, social } : {
             <div className="hover:text-customOrange py-2 hover:cursor-pointer"><Link href={'/professional-accreditation'}>Professional Accreditation</Link></div>
             <div className="hover:text-customOrange py-2 hover:cursor-pointer"><Link href={'/chapter-member'}>Chapter Members</Link></div>
             <div className="hover:text-customOrange py-2 hover:cursor-pointer"><Link href={'/become-a-chapter-member'}>Become A Chapter Member</Link></div>
-            <div className="hover:text-customOrange py-2 hover:cursor-pointer"><Link href={'/quality-members'}>Quality Members</Link></div>
+            <div className="hover:text-customOrange py-2 hover:cursor-pointer"><Link href={'/quality-partners'}>Quality Members</Link></div>
           </div>
 
           <div>
