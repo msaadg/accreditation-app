@@ -4,6 +4,7 @@ import { Logo } from "@/app/components/logo";
 import { NavBar } from "@/app/components/navBar";
 import { pageDataQuery } from "@/app/lib/queries";
 import { PageData } from "@/app/lib/types";
+import { Footer } from "@/app/sections/footerSec";
 import { TitleSec } from "@/app/sections/titleSec";
 import { client } from "@/sanity/lib/client";
 import { useEffect, useState } from "react";
@@ -55,6 +56,8 @@ const QualityPartners = () => {
       <div className="mt-16 mb-64 flex justify-center text-6xl w-full h-96 font-bold">
         Coming Soon!
       </div>
+
+      <Footer email={pageData?.bioData.email || ""} phone={pageData?.bioData.phone || ""} address={pageData?.bioData.address || ""} social={{ facebook: pageData?.facebook || "", insta: pageData?.insta || "", twitter: pageData?.twitter || "", linkedIn: pageData?.linkedIn || "", youtube: pageData?.youtube || "" }} />
     </div>
   );
 }
