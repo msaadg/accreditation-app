@@ -30,6 +30,9 @@ export const NavBar = ({members, professionals, institutes} : {
             }, {
               text: "Become a Chapter Member",
               url: "/become-a-chapter-member"
+            }, {
+              text: "Quality Partners",
+              url: "/quality-partners"
             }]}
           />
         )}
