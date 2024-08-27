@@ -410,3 +410,17 @@ export const eventQuery = groq`
     "slug": slug.current,
   }
 `;
+
+export const qualityPartnersPageQuery = groq`
+  *[_type == "qualityPartnersPage" && slug.current == "quality-partners"][0]{
+    title,
+    subtitle,
+    description,
+    partners[]{
+      title,
+      description,
+      "logoUrl": logoImage.asset->url,
+      "certUrl": certImage.asset->url,
+    }
+  }
+`;

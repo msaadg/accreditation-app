@@ -27,6 +27,7 @@ import { processEducationalPageType } from './schemaTypes/Pages/processEducation
 import { educationalInstituteType } from './schemaTypes/Pages/educationalInstituteType'
 import { educationalInstitutePageType } from './schemaTypes/Pages/educationalInstitutePageType'
 import { insLogosType } from './schemaTypes/Components/insLogosType'
+import { qualityPartnersPageType } from './schemaTypes/Pages/qualityPartnersPageType'
 
 
 export const schema: { types: SchemaTypeDefinition[] } = {
@@ -39,5 +40,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     accreditedProfessionalType, accreditedProfessionalsPageType,
     educationalAccreditationPageType, criteriaEducationalPageType, processEducationalPageType,
     insLogosType, educationalInstituteType, educationalInstitutePageType,
+    qualityPartnersPageType,
   ]
 }

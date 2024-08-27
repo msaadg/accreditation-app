@@ -84,6 +84,13 @@ export interface CertCard {
   benefits: string[];
 }
 
+export interface Partner {
+  title: string;
+  description: string;
+  logoUrl: string;
+  certUrl: string;
+}
+
 export interface PageData {
   bgImgUrl: string;
   logoUrl: string;
@@ -347,3 +354,10 @@ export interface SocialData {
   linkedIn: string;
   youtube: string;
 }
+
+export interface QualityPartnersPage {
+  title: string;
+  subtitle: string;
+  description: string;
+  partners: Partner[];
+};
