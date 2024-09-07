@@ -13,21 +13,26 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  min-height: 100vh;  /* Ensure body takes at least the full height of the viewport */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-y: auto; /* Allow vertical scrolling */
 }
 
 html, body {
   width: 100%;
   height: 100%;
-  overflow-x: hidden; /* Prevent horizontal overflow */
-  overflow-y: auto; /* Allow vertical scrolling */
+}
+
+#content {
+  min-height: 100vh; /* Ensure content takes at least the full height of the viewport */
 }
 
 @media (max-width: 768px) {
-  body {
+  #content {
     transform: scale(0.3); /* Scale down to 30% */
     transform-origin: top left;
     width: 333.33%; /* Adjust width to counteract the shrinkage */
-    height: auto; /* Allow body to grow as needed */
+    height: auto; /* Allow content to grow as needed */
     overflow-x: hidden; /* Prevent horizontal overflow */
     overflow-y: auto; /* Allow vertical scrolling */
   }

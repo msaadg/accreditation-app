@@ -18,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {children}
+        <div id="content">
+          {children}
+        </div>
         <ChatScript /> {/* Insert the client-side chat script here */}
       </body>
     </html>
