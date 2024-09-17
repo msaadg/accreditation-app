@@ -1,15 +1,26 @@
+import React, { useState } from "react";
 import { Carousel } from "@material-tailwind/react";
 import { Slider } from "../lib/types";
 import { RegisterCard } from "./registerCard";
 
 export function CarouselTransition({ slides }: { slides: Slider[] }) {
+  const [isPaused, setIsPaused] = useState(false);
+
   const settings = {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: !isPaused,
     autoplaySpeed: 3000,
+  };
+
+  const handleFocus = () => {
+    setIsPaused(true);
+  };
+
+  const handleBlur = () => {
+    setIsPaused(false);
   };
 
   return (
@@ -33,9 +44,8 @@ export function CarouselTransition({ slides }: { slides: Slider[] }) {
               <div className="text-6xl font-bold mb-4">{slide.title}</div>
               <div className="text-3xl">{slide.description}</div>
             </div>
-            
             <div className="py-4 w-full h-full col-span-2">
-              <RegisterCard />
+              <RegisterCard onFocus={handleFocus} onBlur={handleBlur} />
             </div>
           </div>
         </div>

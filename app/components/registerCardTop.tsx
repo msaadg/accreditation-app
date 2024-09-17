@@ -34,8 +34,6 @@ export const RegisterCardTop = ({ onClose }: { onClose: () => void }) => {
     }
     if (!formData.phone) {
       newErrors.phone = "Please enter your phone number.";
-    } else if (!/^\d{2}-\d{3}-\d{7}$/.test(formData.phone)) {
-      newErrors.phone = "Please enter a valid phone number (e.g., 92-333-1234567).";
     }
 
     setErrors(newErrors);
@@ -155,8 +153,7 @@ export const RegisterCardTop = ({ onClose }: { onClose: () => void }) => {
               name="phone"
               aria-describedby="helper-text-explanation"
               className={`bg-gray-50 border ${errors.phone ? 'border-red-500' : 'border-gray-300'} text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-16 ps-10 p-4`}
-              pattern="[0-9]{2}-[0-9]{3}-[0-9]{7}"
-              placeholder="92-333-1234567"
+              placeholder="1234567890"
               onChange={handleInputChange}
               value={formData.phone}
               required

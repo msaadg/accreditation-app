@@ -11,7 +11,12 @@ interface FormErrors extends Partial<FormData> {
   form?: string;
 }
 
-export const RegisterCard: React.FC = () => {
+interface RegisterCardProps {
+  onFocus: () => void;
+  onBlur: () => void;
+}
+
+export const RegisterCard: React.FC<RegisterCardProps> = ({ onFocus, onBlur }) => {
   const [formData, setFormData] = useState<FormData>({
     userType: "",
     name: "",
@@ -34,8 +39,6 @@ export const RegisterCard: React.FC = () => {
     }
     if (!formData.phone) {
       newErrors.phone = "Please enter your phone number.";
-    } else if (!/^\d{2}-\d{3}-\d{7}$/.test(formData.phone)) {
-      newErrors.phone = "Please enter a valid phone number (e.g., 92-333-1234567).";
     }
 
     setErrors(newErrors);
@@ -97,7 +100,7 @@ export const RegisterCard: React.FC = () => {
       </div>
 
       <div className="mt-6">
-        <form className="max-w-full" onSubmit={handleSubmit}>
+        <form className="max-w-full" onSubmit={handleSubmit} onFocusCapture={onFocus} onBlurCapture={onBlur}>
           <select
             id="countries"
             name="userType"
@@ -145,8 +148,7 @@ export const RegisterCard: React.FC = () => {
               name="phone"
               aria-describedby="helper-text-explanation"
               className={`bg-gray-50 border ${errors.phone ? 'border-red-500' : 'border-gray-300'} text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-16 ps-10 p-4`}
-              pattern="[0-9]{2}-[0-9]{3}-[0-9]{7}"
-              placeholder="92-333-1234567"
+              placeholder="1234567890"
               onChange={handleInputChange}
               value={formData.phone}
               required
