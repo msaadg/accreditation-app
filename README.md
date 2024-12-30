@@ -1,4 +1,6 @@
 # 🌍 WSA Council Accreditation Website 🏅
+Check out the live website here: [**WSA Council**](https://wsacouncil.org)
+
 
 ## Overview 📝
 
@@ -6,7 +8,6 @@ WSA Council is an international organization that offers accreditation to top ed
 
 The platform is designed to be highly scalable, secure, and user-friendly, ensuring smooth navigation for both institutes seeking accreditation and professionals exploring certification options. This website features user authentication, dynamic content management, a responsive design, and live chat integration powered by **Tawk.to** to enhance user interaction.
 
----
 
 ## 🌟 Features
 
@@ -24,7 +25,6 @@ The platform is designed to be highly scalable, secure, and user-friendly, ensur
 
 - **💬 Real-Time Chat Support**: Integrated **Tawk.to** chat allows users to interact directly with support, enhancing the user experience and providing instant guidance.
 
----
 
 ## Key Components 🔑
 
@@ -46,7 +46,6 @@ The platform is designed to be highly scalable, secure, and user-friendly, ensur
 6. **👨‍💻 Admin Dashboard**:
    - Secure, role-based access for administrators to manage content and view applications.
 
----
 
 ## ⚙️ Development Workflow
 
@@ -56,13 +55,11 @@ The platform is designed to be highly scalable, secure, and user-friendly, ensur
 4. **🔑 Authentication**: NextAuth was implemented to ensure secure user login and session management with role-based access control.
 5. **🎨 UI/UX Design**: Tailwind CSS was used to create a modern, mobile-responsive, and intuitive user interface that works across all devices.
 
----
 
 ## 🚀 Deployment
 
 The WSA Council website is deployed on **Vercel** 🟢, benefiting from Vercel's seamless integration with Next.js for fast and reliable hosting, automatic scaling, and secure environments.
 
----
 
 ## 👨‍💻 Technology Stack
 
@@ -70,12 +67,5 @@ The WSA Council website is deployed on **Vercel** 🟢, benefiting from Vercel's
   <img src="https://skillicons.dev/icons?i=nextjs,postgres,ts,tailwind,git,prisma,vercel" />
 </p>
 
----
-
-## 🌐 Live Site
-
-Check out the live website here: [**WSA Council**](https://wsacouncil.org)
-
----
 
 By enhancing this project with interactive features like live chat, real-time content management, and a strong focus on scalability and performance, this platform is a robust accreditation solution for institutes and professionals across Europe.
